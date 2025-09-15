@@ -7,3 +7,31 @@
 .tab-content.active {
   display: block;
 }
+
+/* Estilos para Tailwind Plus Elements */
+el-dropdown {
+  position: relative;
+  display: block;
+}
+
+el-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  margin-top: 0.25rem;
+}
+
+el-menu[hidden] {
+  display: none;
+}
+
+/* Garantir que o dropdown apareça abaixo do botão */
+el-dropdown el-menu {
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 0;
+  right: 0;
+  z-index: 50;
+}

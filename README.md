@@ -28,9 +28,10 @@ recurso-certo-html/
 │   │   └── logo-icon.svg     # Ícone do logo
 │   ├── index.html            # Página de login
 │   ├── recursos.html         # Página principal do sistema
+│   ├── main.js              # Script principal com Tailwind Plus Elements
 │   ├── input.css            # Arquivo CSS de entrada (Tailwind)
 │   └── output.css           # Arquivo CSS compilado
-├── package.json             # Dependências do projeto
+├── package.json             # Dependências e scripts do projeto
 ├── package-lock.json        # Lock das dependências
 └── README.md               # Este arquivo
 ```
@@ -55,24 +56,45 @@ recurso-certo-html/
    npm install
    ```
 
-3. **Compile o CSS (se necessário)**
+3. **Inicie o servidor de desenvolvimento**
    ```bash
-   npx tailwindcss -i src/input.css -o src/output.css --watch
+   npm run dev
    ```
+
+   Isso irá:
+   - Iniciar o Vite na porta 3000
+   - Servir os módulos ES6 corretamente
+   - Compilar o CSS do Tailwind automaticamente
+   - Ficar observando mudanças com Hot Module Replacement
 
 ## 🎨 Desenvolvimento
 
-### Compilação do CSS
+### Scripts Disponíveis
 
-O projeto usa Tailwind CSS v4. Para compilar o CSS durante o desenvolvimento:
+O projeto inclui scripts npm para facilitar o desenvolvimento:
 
 ```bash
-# Compilação única
-npx tailwindcss -i src/input.css -o src/output.css
+# Desenvolvimento com Vite (recomendado)
+npm run dev
 
-# Compilação em modo watch (recompila automaticamente)
-npx tailwindcss -i src/input.css -o src/output.css --watch
+# Build para produção
+npm run build
+
+# Preview do build de produção
+npm run preview
+
+# Compilação manual do CSS (se necessário)
+npm run build:css
 ```
+
+### Sistema de Build
+
+O projeto utiliza:
+- **Vite** como bundler e servidor de desenvolvimento
+- **Tailwind CSS v4** para estilização
+- **Tailwind Plus Elements** para componentes interativos (via npm)
+- **ES Modules** para importação de dependências
+- **Hot Module Replacement (HMR)** para desenvolvimento rápido
 
 ### Estrutura das Páginas
 
@@ -86,10 +108,14 @@ npx tailwindcss -i src/input.css -o src/output.css --watch
 ### Componentes Utilizados
 
 O projeto utiliza componentes do **Tailwind Plus Elements**:
-- `el-dropdown` - Menu dropdown do perfil
-- `el-select` - Seletores customizados
-- `el-dialog` - Modais para visualização de detalhes
-- `el-disclosure` - Menu mobile
+- **Disclosure** - Componentes de accordion/expansão
+- **Dropdown Menu** - Menus dropdown interativos
+- **Dialog** - Modais para visualização de detalhes
+- **Select** - Seletores customizados
+- **Tabs** - Sistema de abas
+- **Popover** - Elementos flutuantes
+- **Command Palette** - Busca avançada
+- **Autocomplete** - Campos de autocompletar
 
 ### Customizações CSS
 
@@ -99,26 +125,53 @@ O arquivo `input.css` contém:
 
 ## 🚀 Como Executar
 
-1. **Instale as dependências** (se ainda não fez):
+### Desenvolvimento (Recomendado)
+
+1. **Instale as dependências**:
    ```bash
    npm install
    ```
 
-2. **Compile o CSS**:
+2. **Inicie o servidor de desenvolvimento**:
    ```bash
-   npx tailwindcss -i src/input.css -o src/output.css
+   npm run dev
    ```
 
-3. **Abra o arquivo HTML**:
-   - Abra `src/index.html` em um navegador web
-   - Ou use um servidor local (recomendado):
-     ```bash
-     # Usando Python
-     python -m http.server 8000
-     
-     # Usando Node.js (http-server)
-     npx http-server src -p 8000
-     ```
+3. **Acesse no navegador**:
+   - Abra `http://localhost:3000` no seu navegador
+   - O servidor irá recompilar o CSS automaticamente quando você fizer alterações
+
+### Produção
+
+1. **Compile o CSS para produção**:
+   ```bash
+   npm run build
+   ```
+
+2. **Sirva os arquivos**:
+   ```bash
+   npm run serve
+   ```
+
+### Execução Manual (Alternativa)
+
+Se preferir não usar o servidor de desenvolvimento:
+
+1. **Compile o CSS**:
+   ```bash
+   npm run build:css
+   ```
+
+2. **Use um servidor local**:
+   ```bash
+   # Usando Python
+   python -m http.server 8000
+   
+   # Usando Node.js (http-server)
+   npx http-server src -p 8000
+   ```
+
+   **⚠️ Importante**: Os módulos ES6 do Tailwind Plus Elements precisam ser servidos via HTTP, não funcionam abrindo o arquivo diretamente no navegador.
 
 ## 📝 Funcionalidades
 
@@ -141,26 +194,46 @@ Para contribuir com o projeto:
 
 1. **Fork** o repositório
 2. **Crie uma branch** para sua feature: `git checkout -b feature/nova-funcionalidade`
-3. **Faça suas alterações** e teste localmente
-4. **Compile o CSS** se necessário: `npx tailwindcss -i src/input.css -o src/output.css`
-5. **Commit** suas mudanças: `git commit -m 'Adiciona nova funcionalidade'`
-6. **Push** para sua branch: `git push origin feature/nova-funcionalidade`
-7. **Abra um Pull Request**
+3. **Instale as dependências**: `npm install`
+4. **Inicie o servidor de desenvolvimento**: `npm run dev`
+5. **Faça suas alterações** e teste localmente em `http://localhost:3000`
+6. **Compile o CSS** se necessário: `npm run build`
+7. **Commit** suas mudanças: `git commit -m 'Adiciona nova funcionalidade'`
+8. **Push** para sua branch: `git push origin feature/nova-funcionalidade`
+9. **Abra um Pull Request**
 
 ## 📚 Documentação Adicional
 
 - [Tailwind CSS v4](https://tailwindcss.com/docs)
-- [Tailwind Plus Elements](https://tailwindplus.com/elements)
+- [Tailwind Plus Elements](https://tailwindcss.com/plus/ui-blocks/documentation/elements)
 - [Inter Font](https://rsms.me/inter/)
+
+## 🔧 Troubleshooting
+
+### Problemas Comuns
+
+**Erro: "Failed to resolve module specifier"**
+- **Causa**: Tentativa de abrir o arquivo HTML diretamente no navegador
+- **Solução**: Use sempre um servidor local (`npm run dev` ou `npm run serve`)
+
+**Componentes não funcionam**
+- **Causa**: Tailwind Plus Elements não carregou
+- **Solução**: Verifique o console do navegador e certifique-se de que está usando um servidor local
+
+**CSS não atualiza**
+- **Causa**: Watch do Tailwind não está ativo
+- **Solução**: Use `npm run dev` para desenvolvimento ou `npm run build:css` para compilação manual
 
 ## 🤝 Contribuição
 
 Contribuições são bem-vindas! Por favor:
 
 1. Siga o padrão de código existente
-2. Teste suas alterações localmente
-3. Mantenha o CSS compilado atualizado
-4. Documente mudanças significativas
+2. Use `npm run dev` para desenvolvimento
+3. Teste suas alterações em `http://localhost:3000`
+4. Mantenha o CSS compilado atualizado com `npm run build`
+5. Documente mudanças significativas
+6. Verifique se os componentes Tailwind Plus Elements funcionam corretamente
 
 ## 📄 Licença
 
