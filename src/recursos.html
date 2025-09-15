@@ -1,0 +1,578 @@
+<!doctype html>
+<html class="h-full bg-bg-gray-50 dark:bg-gray-900">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+</head>
+<body class="h-full">
+    <div class="h-full bg-gray-100">
+        <nav class="border-b border-gray-200 bg-white dark:border-white/10 dark:bg-gray-900">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="flex h-16 justify-between">
+                    <div class="flex items-center">
+                        <div class="flex shrink-0 items-center">
+                            <img src="./img/logo-icon.svg" alt="Your Company" class="h-8 w-auto" />
+                        </div>
+                        <div class="flex flex-col sm:-my-px sm:ml-6 sm:space-x-8">
+                            <h1 class="font-bold text-lg">Sistema de Interposição de Recursos</h1>
+                            <span class="text-sm text-gray-400">FGV Conhecimento</span>
+                        </div>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                        <!-- Profile dropdown -->
+                        <el-dropdown class="relative ml-3">
+                            <button class="relative flex max-w-xs items-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:focus-visible:outline-indigo-500">
+                                <span class="absolute -inset-1.5"></span>
+                                <span class="sr-only">Perfil</span>
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-8 rounded-full outline -outline-offset-1 outline-black/5 dark:outline-white/10" />
+                            </button>
+
+                            <el-menu anchor="bottom end" popover class="w-48 origin-top-right rounded-md bg-white py-1 shadow-lg outline outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-75 data-leave:ease-in dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5">Recursos</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5">Gabarito</a>
+                                <hr>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5">Sair</a>
+                            </el-menu>
+                        </el-dropdown>
+                    </div>
+                    <div class="-mr-2 flex items-center sm:hidden">
+                    <!-- Mobile menu button -->
+                        <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-600 dark:bg-gray-900 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-white dark:focus:outline-indigo-500">
+                            <span class="absolute -inset-0.5"></span>
+                            <span class="sr-only">Open main menu</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+                                <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+                                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
+                <div class="border-t border-gray-200 pt-4 pb-3 dark:border-gray-700">
+                    <div class="flex items-center px-4">
+                    <div class="shrink-0">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-10 rounded-full outline -outline-offset-1 outline-black/5 dark:outline-white/10" />
+                    </div>
+                    <div class="ml-3">
+                        <div class="text-base font-medium text-gray-800 dark:text-white">Tom Cook</div>
+                        <div class="text-sm font-medium text-gray-500 dark:text-gray-400">tom@example.com</div>
+                    </div>
+                    <button type="button" class="relative ml-auto shrink-0 rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-600 dark:text-gray-400 dark:hover:text-white dark:focus:outline-indigo-500">
+                        <span class="absolute -inset-1.5"></span>
+                        <span class="sr-only">View notifications</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                        <path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    </div>
+                    <div class="mt-3 space-y-1">
+                    <a href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-200">Your profile</a>
+                    <a href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-200">Settings</a>
+                    <a href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-200">Sign out</a>
+                    </div>
+                </div>
+            </el-disclosure>
+        </nav>
+
+        <main class="p-6 space-y-6 mx-auto max-w-7xl">
+
+            <div class="border border-gray-200 overflow-hidden rounded-lg bg-white shadow-sm dark:bg-gray-900 dark:shadow-none dark:outline dark:-outline-offset-1 dark:outline-white/10 p-6 space-y-6">
+                <div class="bg-white dark:bg-gray-800/75">
+                    <p class="text-xl font-bold text-gray-900 sm:text-2xl dark:text-white">Seleção de Concurso e Cargo</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+                    <div>
+                        <label for="select" class="block text-sm/6 font-medium text-gray-900">Concurso</label>
+                        <el-select id="select" name="selected" value="4" class="mt-2 block">
+                        <button type="button" class="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-indigo-600 sm:text-sm/6 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:focus-visible:outline-indigo-500">
+                            <el-selectedcontent class="col-start-1 row-start-1 truncate pr-6">Selecione o concurso</el-selectedcontent>
+                            <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4 dark:text-gray-400">
+                            <path d="M5.22 10.22a.75.75 0 0 1 1.06 0L8 11.94l1.72-1.72a.75.75 0 1 1 1.06 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 0 1 0-1.06ZM10.78 5.78a.75.75 0 0 1-1.06 0L8 4.06 6.28 5.78a.75.75 0 0 1-1.06-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                            </svg>
+                        </button>
+
+                            <el-options anchor="bottom start" popover class="max-h-60 w-(--button-width) overflow-auto rounded-md bg-white py-1 text-base shadow-lg outline-1 outline-black/5 [--anchor-gap:--spacing(1)] data-leave:transition data-leave:transition-discrete data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
+                                <el-option value="1" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-indigo-600 focus:text-white focus:outline-hidden dark:text-white dark:focus:bg-indigo-500">
+                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Processo de Seleção PND 2024</span>
+                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden dark:text-indigo-400">
+                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                        <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </el-option>
+                                <el-option value="2" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-indigo-600 focus:text-white focus:outline-hidden dark:text-white dark:focus:bg-indigo-500">
+                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Residência Médica 2024</span>
+                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden dark:text-indigo-400">
+                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                        <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </el-option>
+                            </el-options>
+                        </el-select>
+
+                    </div>
+                    
+                    <div>
+                        <label for="select" class="block text-sm/6 font-medium text-gray-900 dark:text-white">Cargo</label>
+                        <el-select id="select" name="selected" value="4" class="mt-2 block">
+                            <button type="button" class="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-indigo-600 sm:text-sm/6 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:focus-visible:outline-indigo-500">
+                                <el-selectedcontent class="col-start-1 row-start-1 truncate pr-6">Selecione o cargo</el-selectedcontent>
+                                <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4 dark:text-gray-400">
+                                <path d="M5.22 10.22a.75.75 0 0 1 1.06 0L8 11.94l1.72-1.72a.75.75 0 1 1 1.06 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 0 1 0-1.06ZM10.78 5.78a.75.75 0 0 1-1.06 0L8 4.06 6.28 5.78a.75.75 0 0 1-1.06-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                </svg>
+                            </button>
+
+                            <el-options anchor="bottom start" popover class="max-h-60 w-(--button-width) overflow-auto rounded-md bg-white py-1 text-base shadow-lg outline-1 outline-black/5 [--anchor-gap:--spacing(1)] data-leave:transition data-leave:transition-discrete data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
+                                <el-option value="1" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-indigo-600 focus:text-white focus:outline-hidden dark:text-white dark:focus:bg-indigo-500">
+                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Médico</span>
+                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden dark:text-indigo-400">
+                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                        <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </el-option>
+                                <el-option value="2" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-indigo-600 focus:text-white focus:outline-hidden dark:text-white dark:focus:bg-indigo-500">
+                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Enfermeiro</span>
+                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden dark:text-indigo-400">
+                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                        <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </el-option>
+                                <el-option value="2" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-indigo-600 focus:text-white focus:outline-hidden dark:text-white dark:focus:bg-indigo-500">
+                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Fisioterapeura</span>
+                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden dark:text-indigo-400">
+                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                        <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </el-option>
+                                <el-option value="2" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-indigo-600 focus:text-white focus:outline-hidden dark:text-white dark:focus:bg-indigo-500">
+                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Psicólogo</span>
+                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden dark:text-indigo-400">
+                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                        <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </el-option>
+                            </el-options>
+                        </el-select>
+                    </div>
+
+                    <div>
+                        <label for="select" class="block text-sm/6 font-medium text-gray-900 dark:text-white">Turno</label>
+                        <el-select id="select" name="selected" value="4" class="mt-2 block">
+                            <button type="button" class="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-indigo-600 sm:text-sm/6 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:focus-visible:outline-indigo-500">
+                                <el-selectedcontent class="col-start-1 row-start-1 truncate pr-6">Selecione o turno</el-selectedcontent>
+                                <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4 dark:text-gray-400">
+                                <path d="M5.22 10.22a.75.75 0 0 1 1.06 0L8 11.94l1.72-1.72a.75.75 0 1 1 1.06 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 0 1 0-1.06ZM10.78 5.78a.75.75 0 0 1-1.06 0L8 4.06 6.28 5.78a.75.75 0 0 1-1.06-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                </svg>
+                            </button>
+
+                            <el-options anchor="bottom start" popover class="max-h-60 w-(--button-width) overflow-auto rounded-md bg-white py-1 text-base shadow-lg outline-1 outline-black/5 [--anchor-gap:--spacing(1)] data-leave:transition data-leave:transition-discrete data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
+                                <el-option value="1" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-indigo-600 focus:text-white focus:outline-hidden dark:text-white dark:focus:bg-indigo-500">
+                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Manhã</span>
+                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden dark:text-indigo-400">
+                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                        <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </el-option>
+                                <el-option value="2" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-indigo-600 focus:text-white focus:outline-hidden dark:text-white dark:focus:bg-indigo-500">
+                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Tarde</span>
+                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden dark:text-indigo-400">
+                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                        <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </el-option>
+                                <el-option value="2" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-indigo-600 focus:text-white focus:outline-hidden dark:text-white dark:focus:bg-indigo-500">
+                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Noite</span>
+                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden dark:text-indigo-400">
+                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                        <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </el-option>
+                            </el-options>
+                        </el-select>
+                    </div>
+                </div>
+
+                <div class="flex gap-6">
+                    <div class="flex gap-2 items-center">
+                        <p class="text-sm">Nº de Inscrição:</p>
+                        <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 inset-ring inset-ring-gray-500/10 dark:bg-gray-400/10 dark:text-gray-400 dark:inset-ring-gray-400/20">387283876734</span>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <p class="text-sm">Tipo de prova:</p>
+                        <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 inset-ring inset-ring-gray-500/10 dark:bg-gray-400/10 dark:text-gray-400 dark:inset-ring-gray-400/20">Prova A</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="rounded-md bg-blue-50 p-4 border border-blue-300">
+                <div class="flex">
+                    <div class="shrink-0">
+                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 text-blue-400">
+                            <path d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z" clip-rule="evenodd" fill-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="ml-3 flex-1 md:flex md:justify-between">
+                        <p class="text-sm text-blue-700"><strong>Prazo para recursos:</strong> Os recursos podem ser criados até o dia 21 de Novembro, 2025 às 23:59.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TABS -->
+            <div>
+                <div class="grid grid-cols-1 sm:hidden">
+                    <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
+                    <select aria-label="Select a tab" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-2 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600">
+                        <option>Gabarito</option>
+                        <option>Recursos</option>
+                    </select>
+                    <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end fill-gray-500">
+                        <path d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="hidden sm:block">
+                    <div class="border-b border-gray-200">
+                        <nav aria-label="Tabs" class="-mb-px flex space-x-8">
+                            <a href="#recurso" data-tab-target="#recurso" aria-current="page" class="tab-button group inline-flex items-center border-b-2 border-indigo-500 px-1 py-4 gap-2 text-sm font-medium text-indigo-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-input-icon lucide-file-input"><path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M2 15h10"/><path d="m9 18 3-3-3-3"/></svg>
+                                <span>Recursos</span>
+                            </a>
+                            <a href="#gabarito" data-tab-target="#gabarito" class="tab-button active group inline-flex items-center border-b-2 border-transparent px-1 py-4 text-sm font-medium text-gray-500 hover:border-indigo-500 hover:text-indigo-600 gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-spreadsheet-icon lucide-file-spreadsheet"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M8 13h2"/><path d="M14 13h2"/><path d="M8 17h2"/><path d="M14 17h2"/></svg>
+                                <span>Gabarito</span>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTEUDO -->
+            <div id="recurso" class="tab-content">
+                <div class="border border-gray-200 overflow-hidden rounded-lg bg-white shadow-sm p-6 space-y-6 pb-0"> 
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-xl font-bold text-gray-900 sm:text-2xl">Meus Recursos</p>
+                            <p>CPNU 2025</p>
+                        </div>
+                        <button type="button" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                            Novo recurso
+                        </button>
+                    </div>
+
+                    <div command="show-modal" commandfor="dialog" class="border border-gray-200 rounded-lg p-4 space-y-6 cursor-pointer">
+                        <div class="flex justify-between">
+                            <div class="flex gap-2">
+                                <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 1</span>
+                                <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Alteração de gabarito</span>
+                            </div>
+                            <span class="inline-flex items-center rounded-md bg-green-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Respondido</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div>
+                                <p class="text-sm text-gray-700 line-clamp-[1] hyphens-auto">A alternativa C está mais adequada considerando os guidelines mais recentes da AHA 2023. A American Heart Association atualizou suas diretrizes de ressuscitação cardiopulmonar em 2023, estabelecendo novos protocolos que priorizam a compressão torácica de alta qualidade e a desfibrilação precoce. A alternativa C reflete exatamente essas mudanças, incorporando a sequência CAB (Compressões, Via Aérea, Respirações) em vez da sequência ABC anterior. Além disso, a nova diretriz enfatiza a importância da compressão torácica ininterrupta com frequência de 100-120 compressões por minuto e profundidade de pelo menos 5 cm em adultos. A alternativa C também considera o uso de dispositivos de feedback de qualidade para monitorar a eficácia das compressões, o que está alinhado com as evidências científicas mais recentes que demonstram melhoria significativa na sobrevida quando essas técnicas são aplicadas corretamente.</p>
+                                <span class="text-xs text-gray-400">18/03/2024 às 07:30</span>
+                            </div>
+                            <button command="show-modal" commandfor="dialog" type="button" class="rounded-full bg-white p-3 text-sm font-semibold text-indigo-600 shadow-xs inset-ring inset-ring-indigo-500 hover:bg-indigo-600 hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye h-4 w-4"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div command="show-modal" commandfor="dialog" class="border border-gray-200 rounded-lg p-4 space-y-6 cursor-pointer">
+                        <div class="flex justify-between">
+                            <div class="flex gap-2">
+                                <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 1</span>
+                                <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Alteração de gabarito</span>
+                            </div>
+                            <span class="inline-flex items-center rounded-md bg-green-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Respondido</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div>
+                                <p class="text-sm text-gray-700 line-clamp-[1] hyphens-auto">A alternativa C está mais adequada considerando os guidelines mais recentes da AHA 2023. A American Heart Association atualizou suas diretrizes de ressuscitação cardiopulmonar em 2023, estabelecendo novos protocolos que priorizam a compressão torácica de alta qualidade e a desfibrilação precoce. A alternativa C reflete exatamente essas mudanças, incorporando a sequência CAB (Compressões, Via Aérea, Respirações) em vez da sequência ABC anterior. Além disso, a nova diretriz enfatiza a importância da compressão torácica ininterrupta com frequência de 100-120 compressões por minuto e profundidade de pelo menos 5 cm em adultos. A alternativa C também considera o uso de dispositivos de feedback de qualidade para monitorar a eficácia das compressões, o que está alinhado com as evidências científicas mais recentes que demonstram melhoria significativa na sobrevida quando essas técnicas são aplicadas corretamente.</p>
+                                <span class="text-xs text-gray-400">18/03/2024 às 07:30</span>
+                            </div>
+                            <button command="show-modal" commandfor="dialog" type="button" class="rounded-full bg-white p-3 text-sm font-semibold text-indigo-600 shadow-xs inset-ring inset-ring-indigo-500 hover:bg-indigo-600 hover:text-white"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye h-4 w-4"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <el-dialog>
+                        <dialog id="dialog" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+                            <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
+
+                            <div tabindex="0" class="flex items-end justify-center focus:outline-none">
+                                <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 w-full max-w-[800px] max-h-[80vh] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+                                    
+                                    <div class="flex flex-col">
+
+                                        <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
+                                            <div class="flex flex-col gap-2">
+                                                <h3 id="dialog-title" class="text-base font-semibold text-gray-900">Detalhe do Recurso</h3>
+                                                <div class="flex gap-2">
+                                                    <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 1</span>
+                                                    <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Alteração de gabarito</span>
+                                                </div>
+                                            </div>
+                                            <span class="inline-flex items-center rounded-md bg-green-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Respondido</span>
+                                        </div>
+                                        
+                                        <div class="max-h-[500px] overflow-auto p-4 space-y-4">
+
+                                            <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
+                                                <p>Informações do Recurso</p>
+                                                <div class="flex gap-6">
+                                                    <div class="flex-1">
+                                                        <label for="" class="block text-sm/6 font-medium text-gray-500">Protocolo</label>
+                                                        <p>CPNU-2024-001</p>
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <label for="" class="block text-sm/6 font-medium text-gray-500">Nº de inscrição</label>
+                                                        <p>123.456.789-10</p>
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <label for="" class="block text-sm/6 font-medium text-gray-500">Área</label>
+                                                        <p>Matemática</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
+                                                <p>Respostas da Questão</p>
+                                                <div class="flex gap-6">
+                                                    <div class="flex-1">
+                                                        <label for="" class="block text-sm/6 font-medium text-gray-500">Resposta Preliminar</label>
+                                                        <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">A</span>
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <label for="" class="block text-sm/6 font-medium text-gray-500">Resposta Definitiva</label>
+                                                        <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">C</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
+                                                <p>Resposta Proposta</p>
+                                                <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">C</span>
+                                                <div>
+                                                    <label for="" class="block text-sm/6 font-medium text-gray-500">Argumentação</label>
+                                                    <div class="p-4 bg-gray-100 text-sm">
+                                                        A alternativa C está mais adequada considerando os guidelines mais recentes da AHA 2023. A American Heart Association atualizou suas diretrizes de ressuscitação cardiopulmonar em 2023, estabelecendo novos protocolos que priorizam a compressão torácica de alta qualidade e a desfibrilação precoce. A alternativa C reflete exatamente essas mudanças, incorporando a sequência CAB (Compressões, Via Aérea, Respirações) em vez da sequência ABC anterior. Além disso, a nova diretriz enfatiza a importância da compressão torácica ininterrupta com frequência de 100-120 compressões por minuto e profundidade de pelo menos 5 cm em adultos. A alternativa C também considera o uso de dispositivos de feedback de qualidade para monitorar a eficácia das compressões, o que está alinhado com as evidências científicas mais recentes que demonstram melhoria significativa na sobrevida quando essas técnicas são aplicadas corretamente.
+                                                    </div>
+                                                </div>
+                                                <p class="text-xs text-gray-400">Criado em 18/03/2024 às 07:30</p>
+                                            </div>
+
+                                            <div class="rounded-md bg-green-50 border border-green-300 p-4">
+                                                <div class="flex flex-col">
+                                                    <h3 class="font-medium text-green-800">Parecer geral da banca</h3>
+                                                    <div class="mt-2 text-sm text-green-700">
+                                                        <p>As alternativas A e C realmente tinham interpretações possíveis que não tinham sido consideradas na elaboração inicial do gabarito. Após análise detalhada dos guidelines da AHA 2023, verificou-se que a alternativa C está mais alinhada com as diretrizes atuais de ressuscitação cardiopulmonar, incorporando a sequência CAB e as recomendações mais recentes sobre compressão torácica de alta qualidade.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="flex p-4 border-t border-gray-100">
+                                            <button type="button" command="close" commandfor="dialog" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-indigo-600 shadow-xs inset-ring inset-ring-indigo-500 hover:bg-indigo-600 hover:text-white ml-auto">Fechar</button>
+                                        </div>
+
+                                    </div>
+
+                                </el-dialog-panel>
+                            </div>
+                        </dialog>
+                    </el-dialog>
+
+                </div>
+            </div>
+
+            <div id="gabarito" class="tab-content active">
+                <div class="border border-gray-200 overflow-hidden rounded-lg bg-white shadow-sm p-6 space-y-6 pb-0">
+                
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 sm:text-2xl">Versão da Prova</p>
+                        
+                        <el-select id="select" name="selected" value="4" class="mt-2 block">
+                            
+                            <button type="button" class="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-indigo-600 sm:text-sm/6">
+                                <el-selectedcontent class="col-start-1 row-start-1 flex items-center gap-3 pr-6">
+                                    <span aria-hidden="true" class="inline-block size-2 shrink-0 rounded-full border border-transparent bg-blue-400 forced-colors:bg-[Highlight]"></span>
+                                    <span class="ml-3 block truncate font-normal group-aria-selected/option:font-semibold">Prova A</span>
+                                </el-selectedcontent>
+                                <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4">
+                                    <path d="M5.22 10.22a.75.75 0 0 1 1.06 0L8 11.94l1.72-1.72a.75.75 0 1 1 1.06 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 0 1 0-1.06ZM10.78 5.78a.75.75 0 0 1-1.06 0L8 4.06 6.28 5.78a.75.75 0 0 1-1.06-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                </svg>
+                            </button>
+
+                            <el-options anchor="bottom start" popover class="max-h-60 w-(--button-width) overflow-auto rounded-md bg-white py-1 text-base shadow-lg outline-1 outline-black/5 [--anchor-gap:--spacing(1)] data-leave:transition data-leave:transition-discrete data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm">
+                                <el-option value="1" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-gray-100 focus:outline-hidden">
+                                    <div class="flex items-center">
+                                        <span aria-hidden="true" class="inline-block size-2 shrink-0 rounded-full border border-transparent bg-blue-500 forced-colors:bg-[Highlight]"></span>
+                                        <span class="ml-3 block truncate font-normal group-aria-selected/option:font-semibold">
+                                            Prova A
+                                        </span>
+                                    </div>
+                                </el-option>
+                                <el-option value="2" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-gray-100 focus:outline-hidden">
+                                    <div class="flex items-center">
+                                        <span aria-hidden="true" class="inline-block size-2 shrink-0 rounded-full border border-transparent bg-green-500"></span>
+                                        <span class="ml-3 block truncate font-normal group-aria-selected/option:font-semibold">
+                                            Prova B
+                                        </span>
+                                    </div>
+                                </el-option>
+                                <el-option value="3" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-gray-100 focus:outline-hidden">
+                                    <div class="flex items-center">
+                                        <span aria-hidden="true" class="inline-block size-2 shrink-0 rounded-full border border-transparent bg-orange-500"></span>
+                                        <span class="ml-3 block truncate font-normal group-aria-selected/option:font-semibold">
+                                            Prova C
+                                        </span>
+                                    </div>
+                                </el-option>
+                                <el-option value="3" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-gray-100 focus:outline-hidden">
+                                    <div class="flex items-center">
+                                        <span aria-hidden="true" class="inline-block size-2 shrink-0 rounded-full border border-transparent bg-purple-500"></span>
+                                        <span class="ml-3 block truncate font-normal group-aria-selected/option:font-semibold">
+                                            Prova D
+                                        </span>
+                                    </div>
+                                </el-option>
+                            </el-options>
+                        </el-select>
+
+                    </div>
+
+                    <div>
+                        Questões (56)
+                    </div>
+
+                    <div class="grid grid-cols-3 grid-rows-20 gap-4">
+
+                        <div class="border border-gray-200 overflow-hidden rounded-lg bg-white shadow-xs hover:shadow-md p-4 cursor-pointer space-y-4">
+                            <div class="flex justify-between">
+                                <div class="flex gap-2">
+                                    <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 1</span>
+                                    <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Matemática</span>
+                                </div>
+                                <span class="inline-flex items-center rounded-md bg-green-100 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-gray-500/10">Gabarito Mantido</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex gap-2">
+                                    <p>Resposta:</p> <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">A</span>
+                                </div>
+                                <button command="show-modal" commandfor="dialog" type="button" class="rounded-lg bg-white p-3 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:bg-indigo-600 hover:text-white hover:inset-ring-indigo-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye h-4 w-4"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-200 overflow-hidden rounded-lg bg-white shadow-xs hover:shadow-md p-4 cursor-pointer space-y-4">
+                            <div class="flex justify-between">
+                                <div class="flex gap-2">
+                                    <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 2</span>
+                                    <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Matemática</span>
+                                </div>
+                                <span class="inline-flex items-center rounded-md bg-green-100 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-gray-500/10">Gabarito Mantido</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex gap-2">
+                                    <p>Resposta:</p> <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">B</span>
+                                </div>
+                                <button command="show-modal" commandfor="dialog" type="button" class="rounded-lg bg-white p-3 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:bg-indigo-600 hover:text-white hover:inset-ring-indigo-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye h-4 w-4"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-200 overflow-hidden rounded-lg bg-white shadow-xs hover:shadow-md p-4 cursor-pointer space-y-4">
+                            <div class="flex justify-between">
+                                <div class="flex gap-2">
+                                    <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 3</span>
+                                    <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Português</span>
+                                </div>
+                                <span class="inline-flex items-center rounded-md bg-yellow-100 px-2 py-1 text-xs font-medium text-yellow-700 inset-ring inset-ring-yellow-500/10">Gabarito Alterado</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex gap-2">
+                                    <p>Resposta:</p> <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">B</span>
+                                </div>
+                                <button command="show-modal" commandfor="dialog" type="button" class="rounded-lg bg-white p-3 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:bg-indigo-600 hover:text-white hover:inset-ring-indigo-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye h-4 w-4"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-200 overflow-hidden rounded-lg bg-white shadow-xs hover:shadow-md p-4 cursor-pointer space-y-4">
+                            <div class="flex justify-between">
+                                <div class="flex gap-2">
+                                    <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 4</span>
+                                    <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">História</span>
+                                </div>
+                                <span class="inline-flex items-center rounded-md bg-red-100 px-2 py-1 text-xs font-medium text-red-700 inset-ring inset-ring-red-500/10">Gabarito Anulada</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex gap-2">
+                                    <p>Resposta:</p> <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">B</span>
+                                </div>
+                                <button command="show-modal" commandfor="dialog" type="button" class="rounded-lg bg-white p-3 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:bg-indigo-600 hover:text-white hover:inset-ring-indigo-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye h-4 w-4"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+            const targetId = button.dataset.tabTarget;
+            const targetContent = document.querySelector(targetId);
+
+            // Deactivate ALL active tabs
+            document.querySelectorAll('.tab-button')
+                .forEach(el => {
+                el.classList.remove('active', 'border-indigo-500', 'text-indigo-600');
+                el.classList.add('border-transparent', 'text-gray-500'); // 👈 add "inactive" classes
+                });
+
+            // Deactivate ALL contents
+            document.querySelectorAll('.tab-content.active')
+                .forEach(el => el.classList.remove('active'));
+
+            // Activate clicked tab and content
+            button.classList.add('active', 'border-indigo-500', 'text-indigo-600');
+            button.classList.remove('border-transparent', 'text-gray-500'); // 👈 remove inactive from active tab
+            targetContent.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
