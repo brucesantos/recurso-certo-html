@@ -315,7 +315,245 @@
                         </div>
                     </div>
                     
+                    <!-- NOVO RECURSO -->
+                    <el-dialog>
+                        <dialog id="novoRecurso" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+                            <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
 
+                            <div tabindex="0" class="flex items-end justify-center focus:outline-none">
+                                <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 max-w-[600px] max-h-[80vh] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+                                    
+                                    <div class="flex flex-col">
+
+                                        <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
+                                            <h3 id="dialog-title" class="text-base font-semibold text-gray-900">Interpor Novo Recurso</h3>
+                                        </div>
+                                        
+                                        <div id="selecionaTipo" class="hidden"> 
+                                            <div class="max-h-[500px] overflow-auto p-4 space-y-4">
+
+                                                <div>
+                                                    <p>Tipo de Recurso</p>
+                                                    <p class="text-sm text-gray-500">Selecione o tipo de recurso que deseja interpor:</p>
+                                                </div>
+                                                
+                                                <fieldset aria-label="Privacy setting" class="-space-y-px rounded-md bg-white">
+                                                    <label aria-label="Public access" aria-description="This project would be available to anyone who has the link" class="group flex border border-gray-200 p-4 first:rounded-tl-md first:rounded-tr-md last:rounded-br-md last:rounded-bl-md focus:outline-hidden has-checked:relative has-checked:border-sky-200 has-checked:bg-sky-50">
+                                                        <input type="radio" name="privacy-setting" value="public" checked class="relative mt-0.5 size-4 shrink-0 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-sky-600 checked:bg-sky-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden" />
+                                                        <span class="ml-3 flex flex-col">
+                                                            <span class="block text-md font-medium text-gray-900 group-has-checked:text-sky-900">Anulação de Questão</span>
+                                                            <span class="block text-sm text-gray-500 group-has-checked:text-sky-700">Quando o participante entende que a questão é inválida ou apresenta erro, pedindo que ela seja desconsiderada.</span>
+                                                        </span>
+                                                    </label>
+                                                    <label aria-label="Private to project members" aria-description="Only members of this project would be able to access" class="group flex border border-gray-200 p-4 first:rounded-tl-md first:rounded-tr-md last:rounded-br-md last:rounded-bl-md focus:outline-hidden has-checked:relative has-checked:border-sky-200 has-checked:bg-sky-50">
+                                                        <input type="radio" name="privacy-setting" value="private-to-project-members" class="relative mt-0.5 size-4 shrink-0 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-sky-600 checked:bg-sky-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden" />
+                                                        <span class="ml-3 flex flex-col">
+                                                            <span class="block text-md font-medium text-gray-900 group-has-checked:text-sky-900">Alteração de Gabarito</span>
+                                                            <span class="block text-sm text-gray-500 group-has-checked:text-sky-700">Quando o participante acredita que a resposta correta indicada está errada e sugere outra alternativa como correta.</span>
+                                                        </span>
+                                                    </label>
+                                                </fieldset>
+
+
+                                            </div>
+
+                                            <div class="flex p-4 border-t border-gray-100">
+                                                <button type="button" command="close" commandfor="dialog" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-sky-600 shadow-xs inset-ring inset-ring-sky-500 hover:bg-sky-600 hover:text-white ml-auto">Continuar</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="anulacaoQuestao">
+                                            <div class="max-h-[500px] overflow-auto p-4 space-y-4">
+
+                                                <p>Anulação de questão</p>
+                                                
+                                                <div class="space-y-4">
+
+                                                    <div>
+                                                        <label for="registerNumber" class="block text-sm/6 font-medium text-gray-900">Nº de Inscrição</label>
+                                                        <div class="mt-2">
+                                                            <input disabled id="registerNumber" type="text" name="registerNumber" required autocomplete="registerNumber" placeholder="" value="387283876734" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600 sm:text-sm/6" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        <label for="select" class="block text-sm/6 font-medium text-gray-900">Questão</label>
+                                                        <el-select id="select" name="selected" value="4" class="mt-2 block">
+                                                            <button type="button" class="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-sky-600 sm:text-sm/6">
+                                                                <el-selectedcontent class="col-start-1 row-start-1 truncate pr-6">Selecione a questão</el-selectedcontent>
+                                                                <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4">
+                                                                <path d="M5.22 10.22a.75.75 0 0 1 1.06 0L8 11.94l1.72-1.72a.75.75 0 1 1 1.06 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 0 1 0-1.06ZM10.78 5.78a.75.75 0 0 1-1.06 0L8 4.06 6.28 5.78a.75.75 0 0 1-1.06-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                </svg>
+                                                            </button>
+
+                                                            <el-options anchor="bottom start" popover class="max-h-60 w-(--button-width) overflow-auto rounded-md bg-white py-1 text-base shadow-lg outline-1 outline-black/5 [--anchor-gap:--spacing(1)] data-leave:transition data-leave:transition-discrete data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm">
+                                                                <el-option value="6" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
+                                                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Questão 1</span>
+                                                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                        </svg>
+                                                                    </span>
+                                                                </el-option>
+                                                                <el-option value="7" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
+                                                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Questão 2</span>
+                                                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                        </svg>
+                                                                    </span>
+                                                                </el-option>
+                                                                <el-option value="8" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
+                                                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Questão 3</span>
+                                                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                        </svg>
+                                                                    </span>
+                                                                </el-option>
+                                                                <el-option value="9" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
+                                                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Questão 4</span>
+                                                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                        </svg>
+                                                                    </span>
+                                                                </el-option>
+                                                                <el-option value="10" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
+                                                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Questão 5</span>
+                                                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                        </svg>
+                                                                    </span>
+                                                                </el-option>
+                                                            </el-options>
+                                                        </el-select>
+                                                    </div>
+
+                                                    <div>
+                                                        <label for="comment" class="block text-sm/6 font-medium text-gray-900">Argumentação</label>
+                                                        <div class="mt-2">
+                                                            <textarea id="comment" name="comment" rows="4" placeholder="Digite sua argumentação lógica e consistente aqui. Exemplo: A questão apresenta ambiguidade na interpretação dos conceitos apresentados, uma vez que as alternativas B e C podem ser consideradas corretas segundo os guidelines mais recentes da literatura médica..." class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600 sm:text-sm/6"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+
+                                            </div>
+
+                                            <div class="flex justify-between p-4 border-t border-gray-100">
+                                                <button type="button" command="close" commandfor="dialog" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-sky-600 shadow-xs inset-ring inset-ring-sky-500 hover:bg-sky-600 hover:text-white">Voltar</button>
+                                                <button type="button" command="close" commandfor="dialog" class="flex items-center gap-2 rounded-md bg-sky-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-sky-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Interpor Recurso</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="anulacaoGabarito">
+                                            <div class="max-h-[500px] overflow-auto p-4 space-y-4">
+
+                                                <p>Anulação de Gabarito</p>
+                                                
+                                                <div class="space-y-4">
+
+                                                    <div>
+                                                        <label for="registerNumber" class="block text-sm/6 font-medium text-gray-900">Nº de Inscrição</label>
+                                                        <div class="mt-2">
+                                                            <input disabled id="registerNumber" type="text" name="registerNumber" required autocomplete="registerNumber" placeholder="" value="387283876734" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600 sm:text-sm/6" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        <label for="select" class="block text-sm/6 font-medium text-gray-900">Questão</label>
+                                                        <el-select id="select" name="selected" value="4" class="mt-2 block">
+                                                            <button type="button" class="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-sky-600 sm:text-sm/6">
+                                                                <el-selectedcontent class="col-start-1 row-start-1 truncate pr-6">Selecione a questão</el-selectedcontent>
+                                                                <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4">
+                                                                <path d="M5.22 10.22a.75.75 0 0 1 1.06 0L8 11.94l1.72-1.72a.75.75 0 1 1 1.06 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 0 1 0-1.06ZM10.78 5.78a.75.75 0 0 1-1.06 0L8 4.06 6.28 5.78a.75.75 0 0 1-1.06-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                </svg>
+                                                            </button>
+
+                                                            <el-options anchor="bottom start" popover class="max-h-60 w-(--button-width) overflow-auto rounded-md bg-white py-1 text-base shadow-lg outline-1 outline-black/5 [--anchor-gap:--spacing(1)] data-leave:transition data-leave:transition-discrete data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm">
+                                                                <el-option value="6" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
+                                                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Questão 1</span>
+                                                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                        </svg>
+                                                                    </span>
+                                                                </el-option>
+                                                                <el-option value="7" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
+                                                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Questão 2</span>
+                                                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                        </svg>
+                                                                    </span>
+                                                                </el-option>
+                                                                <el-option value="8" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
+                                                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Questão 3</span>
+                                                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                        </svg>
+                                                                    </span>
+                                                                </el-option>
+                                                                <el-option value="9" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
+                                                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Questão 4</span>
+                                                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                        </svg>
+                                                                    </span>
+                                                                </el-option>
+                                                                <el-option value="10" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
+                                                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Questão 5</span>
+                                                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                        </svg>
+                                                                    </span>
+                                                                </el-option>
+                                                            </el-options>
+                                                        </el-select>
+                                                    </div>
+
+                                                    <div>
+                                                        <label for="comment" class="block text-sm/6 font-medium text-gray-900">Argumentação</label>
+                                                        <div class="mt-2">
+                                                            <textarea id="comment" name="comment" rows="4" placeholder="Digite sua argumentação lógica e consistente aqui. Exemplo: A questão apresenta ambiguidade na interpretação dos conceitos apresentados, uma vez que as alternativas B e C podem ser consideradas corretas segundo os guidelines mais recentes da literatura médica..." class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600 sm:text-sm/6"></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        <label for="registerNumber" class="block text-sm/6 font-medium text-gray-900">Alternativa Correta Proposta</label>
+                                                        <p>Selecione qual alternativa você considera como a resposta correta:</p>
+
+                                                        <span class="isolate inline-flex rounded-md shadow-xs">
+                                                            <button type="button" class="relative inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 inset-ring-1 inset-ring-gray-300 hover:bg-gray-50 focus:z-10">A</button>
+                                                            <button type="button" class="relative -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 inset-ring-1 inset-ring-gray-300 hover:bg-gray-50 focus:z-10">B</button>
+                                                            <button type="button" class="relative -ml-px inline-flex items-center rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 inset-ring-1 inset-ring-gray-300 hover:bg-gray-50 focus:z-10">C</button>
+                                                            <button type="button" class="relative -ml-px inline-flex items-center rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 inset-ring-1 inset-ring-gray-300 hover:bg-gray-50 focus:z-10">D</button>
+                                                            <button type="button" class="relative -ml-px inline-flex items-center rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 inset-ring-1 inset-ring-gray-300 hover:bg-gray-50 focus:z-10">E</button>
+                                                        </span>
+
+                                                    </div>
+                                                    
+                                                </div>
+
+                                            </div>
+
+                                            <div class="flex justify-between p-4 border-t border-gray-100">
+                                                <button type="button" command="close" commandfor="dialog" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-sky-600 shadow-xs inset-ring inset-ring-sky-500 hover:bg-sky-600 hover:text-white">Voltar</button>
+                                                <button type="button" command="close" commandfor="dialog" class="flex items-center gap-2 rounded-md bg-sky-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-sky-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Interpor Recurso</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </el-dialog-panel>
+                            </div>
+                        </dialog>
+                    </el-dialog>
 
                     <!-- DETALHE RECURSO -->
                     <el-dialog>
@@ -576,6 +814,21 @@
             button.classList.remove('border-transparent', 'text-gray-500'); // 👈 remove inactive from active tab
             targetContent.classList.add('active');
             });
+        });
+
+        const div1 = document.getElementById("div1");
+        const div2 = document.getElementById("div2");
+        const btn1 = document.getElementById("btn1");
+        const btn2 = document.getElementById("btn2");
+
+        btn1.addEventListener("click", () => {
+            div1.classList.add("hidden");
+            div2.classList.remove("hidden");
+        });
+
+        btn2.addEventListener("click", () => {
+            div2.classList.add("hidden");
+            div1.classList.remove("hidden");
         });
     </script>
 
