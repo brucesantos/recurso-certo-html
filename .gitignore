@@ -10,7 +10,7 @@ build/
 .output/
 
 # Generated CSS files
-src/output.css
+/src/output.css
 
 # Environment variables
 .env
