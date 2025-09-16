@@ -18,7 +18,7 @@
                 <div>
                     <label for="cpf" class="block text-sm/6 font-medium text-gray-900">CPF</label>
                     <div class="mt-2">
-                    <input id="cpf" type="text" name="cpf" required autocomplete="cpf" placeholder="000.000.000-00" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600 sm:text-sm/6" />
+                    <input id="cpf" type="text" maxlength="14" name="cpf" required autocomplete="cpf" placeholder="000.000.000-00" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600 sm:text-sm/6" />
                     </div>
                 </div>
 
@@ -81,6 +81,16 @@
                 eyeClosed.classList.add('hidden');
                 eyeOpen.classList.remove('hidden');
             }
+        });
+
+        // Mascara CPF
+        const cpfInput = document.getElementById('cpf');
+        cpfInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, ""); // só números
+            value = value.replace(/(\d{3})(\d)/, "$1.$2");
+            value = value.replace(/(\d{3})(\d)/, "$1.$2");
+            value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+            e.target.value = value;
         });
     </script>
 
