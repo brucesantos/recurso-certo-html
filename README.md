@@ -148,10 +148,17 @@ O arquivo `input.css` contém:
    npm run build
    ```
 
-2. **Sirva os arquivos**:
+2. **Sirva os arquivos do build (sem SPA)**:
    ```bash
-   npm run serve
+   # Dentro da pasta do projeto
+   npx serve dist -l 8080
+   # abra http://localhost:8080/index.html
    ```
+
+   Observações:
+   - Use sem a flag `-s` (SPA mode). Com `-s`, requisições como `POST /recursos.html` podem ser reescritas para `index.html`, aparentando “voltar” para o login.
+   - Se acessar `http://localhost:8080/` retornar 404, abra explicitamente `http://localhost:8080/index.html`.
+   - O 404 de `favicon.ico` é esperado se não houver favicon.
 
 ### Execução Manual (Alternativa)
 
