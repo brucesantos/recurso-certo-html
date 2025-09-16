@@ -14,10 +14,10 @@
                 <div class="flex h-16 justify-between">
                     <div class="flex items-center">
                         <div class="flex shrink-0 items-center">
-                            <img src="./img/logo-icon.svg" alt="Your Company" class="h-8 w-auto" />
+                            <img src="./img/logo-icon.svg" alt="Your Company" class="h-4 w-auto sm:h-8" />
                         </div>
-                        <div class="flex flex-col sm:-my-px sm:ml-6 sm:space-x-8">
-                            <h1 class="font-bold text-lg">Sistema de Interposição de Recursos</h1>
+                        <div class="flex flex-col ml-2 min-w-0 sm:-my-px sm:ml-6 sm:space-x-8 sm:min-w-full sm:ml-6 sm:mr-0 sm:flex-none">
+                            <h1 class="font-bold text-sm truncate whitespace-nowrap max-w-[60vw] sm:max-w-none sm:text-lg">Sistema de Interposição de Recursos</h1>
                             <span class="text-sm text-gray-400">FGV Conhecimento</span>
                         </div>
                     </div>
@@ -54,28 +54,8 @@
             </div>
 
             <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
-                <div class="border-t border-gray-200 pt-4 pb-3">
-                    <div class="flex items-center px-4">
-                    <div class="shrink-0">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-10 rounded-full outline -outline-offset-1 outline-black/5 dark:outline-white/10" />
-                    </div>
-                    <div class="ml-3">
-                        <div class="text-base font-medium text-gray-800">Tom Cook</div>
-                        <div class="text-sm font-medium text-gray-500">tom@example.com</div>
-                    </div>
-                    <button type="button" class="relative ml-auto shrink-0 rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-2 focus:outline-offset-2 focus:outline-sky-600">
-                        <span class="absolute -inset-1.5"></span>
-                        <span class="sr-only">View notifications</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
-                        <path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                    </div>
-                    <div class="mt-3 space-y-1">
-                    <a href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800">Your profile</a>
-                    <a href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800">Settings</a>
-                    <a href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800">Sign out</a>
-                    </div>
+                <div class="border-t border-gray-200 py-2">
+                    <a href="index.html" class="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-800">Sair</a>
                 </div>
             </el-disclosure>
         </nav>
@@ -207,7 +187,7 @@
                     </div>
                 </div>
 
-                <div id="inscricao-info" class="flex gap-6" style="display: none;">
+                <div id="inscricao-info" class="flex flex-col sm:flex-row gap-6" style="display: none;">
                     <div class="flex gap-2 items-center">
                         <p class="text-sm">Nº de Inscrição:</p>
                         <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 inset-ring inset-ring-gray-500/10">387283876734</span>
@@ -272,7 +252,7 @@
 
                     <!-- TABS -->
                     <div>
-                        <div class="grid grid-cols-1 sm:hidden">
+                        <div class="hidden">
                             <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
                             <select aria-label="Select a tab" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-2 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600">
                                 <option>Gabarito</option>
@@ -282,7 +262,7 @@
                                 <path d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
                             </svg>
                         </div>
-                        <div class="hidden sm:block">
+                        <div class="block">
                             <div class="border-b border-gray-200">
                                 <nav aria-label="Tabs" class="-mb-px flex space-x-8">
                                     <a href="#recurso" data-tab-target="#recurso" aria-current="page" class="tab-button active group inline-flex items-center border-b-2 border-sky-500 px-1 py-4 gap-2 text-sm font-medium text-sky-600">
@@ -303,8 +283,7 @@
                         <div class="border border-gray-200 overflow-hidden rounded-lg bg-white shadow-sm p-6 space-y-6 pb-0"> 
                             <div class="flex items-center justify-between">
                                 <div>
-                                    <p class="text-xl font-bold text-gray-900 sm:text-2xl">Meus Recursos</p>
-                                    <p>CPNU 2025</p>
+                                    <p class="text-lg font-bold text-gray-900 sm:text-2xl">Meus Recursos</p>
                                 </div>
                                 <button command="show-modal" commandfor="novoRecurso" type="button" class="rounded-md bg-sky-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-sky-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">
                                     Novo recurso
@@ -315,7 +294,7 @@
                                 <div class="flex justify-between">
                                     <div class="flex gap-2">
                                         <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 1</span>
-                                        <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Alteração de gabarito</span>
+                                        <span class="hidden sm:inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Alteração de gabarito</span>
                                     </div>
                                     <span class="inline-flex items-center rounded-md bg-green-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Respondido</span>
                                 </div>
@@ -334,7 +313,7 @@
                                 <div class="flex justify-between">
                                     <div class="flex gap-2">
                                         <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 1</span>
-                                        <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Anulação da Questão</span>
+                                        <span class="hidden sm:inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Anulação da Questão</span>
                                     </div>
                                     <span class="inline-flex items-center rounded-md bg-red-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-red-500/10">Excluído</span>
                                 </div>
@@ -353,7 +332,7 @@
                                 <div class="flex justify-between">
                                     <div class="flex gap-2">
                                         <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 1</span>
-                                        <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Alteração de Gabarito</span>
+                                        <span class="hidden sm:inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Alteração de Gabarito</span>
                                     </div>
                                     <span class="inline-flex items-center rounded-md bg-yellow-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-yellow-500/10">Em análise</span>
                                 </div>
@@ -376,7 +355,7 @@
                                 <dialog id="deletarRecurso" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
                                     <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
 
-                                    <div tabindex="0" class="flex items-end justify-center focus:outline-none">
+                                    <div tabindex="0" class="flex items-end justify-center focus:outline-none p-4 sm:p-0">
                                         <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 w-full max-w-[500px] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
                                             
                                             <div class="flex flex-col">
@@ -411,7 +390,7 @@
                                 <dialog id="novoRecurso" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
                                     <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
 
-                                    <div tabindex="0" class="flex items-end justify-center focus:outline-none">
+                                    <div tabindex="0" class="flex items-end justify-center focus:outline-none p-4 sm:p-0">
                                         <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 w-full max-w-[500px] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
                                             
                                             <div class="flex flex-col">
@@ -580,7 +559,7 @@
                                 <dialog id="detalheRespondido" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
                                     <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
 
-                                    <div tabindex="0" class="flex items-end justify-center focus:outline-none">
+                                    <div tabindex="0" class="flex items-end justify-center focus:outline-none p-4 sm:p-0">
                                         <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 w-full max-w-[800px] max-h-[80vh] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
                                             
                                             <div class="flex flex-col">
@@ -588,7 +567,7 @@
                                                 <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
                                                     <div class="flex flex-col gap-2">
                                                         <h3 id="dialog-title" class="text-base font-semibold text-gray-900">Detalhe do Recurso</h3>
-                                                        <div class="flex gap-2">
+                                                        <div class="flex flex-wrap sm:flex-nowrap gap-2 gap-y-1">
                                                             <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 1</span>
                                                             <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Alteração de gabarito</span>
                                                         </div>
@@ -607,7 +586,7 @@
 
                                                     <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
                                                         <p>Informações do Recurso</p>
-                                                        <div class="flex gap-6">
+                                                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                                                             <div class="flex-1">
                                                                 <label for="" class="block text-sm/6 font-medium text-gray-500">Protocolo</label>
                                                                 <p class="text-sm">CPNU-2024-001</p>
@@ -676,7 +655,7 @@
                                 <dialog id="detalheAnalise" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
                                     <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
 
-                                    <div tabindex="0" class="flex items-end justify-center focus:outline-none">
+                                    <div tabindex="0" class="flex items-end justify-center focus:outline-none p-4 sm:p-0">
                                         <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 w-full max-w-[800px] max-h-[80vh] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
                                             
                                             <div class="flex flex-col">
@@ -684,7 +663,7 @@
                                                 <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
                                                     <div class="flex flex-col gap-2">
                                                         <h3 id="dialog-title" class="text-base font-semibold text-gray-900">Detalhe do Recurso</h3>
-                                                        <div class="flex gap-2">
+                                                        <div class="flex flex-wrap sm:flex-nowrap gap-2 gap-y-1">
                                                             <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 1</span>
                                                             <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Alteração de gabarito</span>
                                                         </div>
@@ -703,7 +682,7 @@
 
                                                     <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
                                                         <p>Informações do Recurso</p>
-                                                        <div class="flex gap-6">
+                                                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                                                             <div class="flex-1">
                                                                 <label for="" class="block text-sm/6 font-medium text-gray-500">Protocolo</label>
                                                                 <p class="text-sm">CPNU-2024-001</p>
@@ -767,7 +746,7 @@
                                 <dialog id="detalheExcluido" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
                                     <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
 
-                                    <div tabindex="0" class="flex items-end justify-center focus:outline-none">
+                                    <div tabindex="0" class="flex items-end justify-center focus:outline-none p-4 sm:p-0">
                                         <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 w-full max-w-[800px] max-h-[80vh] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
                                             
                                             <div class="flex flex-col">
@@ -775,7 +754,7 @@
                                                 <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
                                                     <div class="flex flex-col gap-2">
                                                         <h3 id="dialog-title" class="text-base font-semibold text-gray-900">Detalhe do Recurso</h3>
-                                                        <div class="flex gap-2">
+                                                        <div class="flex flex-wrap sm:flex-nowrap gap-2 gap-y-1">
                                                             <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 1</span>
                                                             <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Alteração de gabarito</span>
                                                         </div>
@@ -794,7 +773,7 @@
 
                                                     <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
                                                         <p>Informações do Recurso</p>
-                                                        <div class="flex gap-6">
+                                                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                                                             <div class="flex-1">
                                                                 <label for="" class="block text-sm/6 font-medium text-gray-500">Protocolo</label>
                                                                 <p class="text-sm">CPNU-2024-001</p>
@@ -1001,10 +980,10 @@
                     <div id="gabarito" class="tab-content">
                         <div class="border border-gray-200 overflow-hidden rounded-lg bg-white shadow-sm p-6 space-y-6">
                         
-                            <div class="flex justify-between">
+                            <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                                 
                                 <div>
-                                    <p class="text-xl font-bold text-gray-900 sm:text-2xl">Versão da Prova</p>
+                                    <p class="text-lg font-bold text-gray-900 sm:text-2xl">Versão da Prova</p>
                                 
                                     <el-select id="select" name="selected" value="4" class="mt-2">
                                         
@@ -1056,8 +1035,8 @@
                                     </el-select>
                                 </div>
 
-                                <div class="flex gap-2 items-center w-[200px]">
-                                    <p class="text-sm">Filtros:</p>
+                                <div class="flex flex-col gap-1 w-full sm:w-[200px]">
+                                    <label for="select" class="text-sm font-medium">Filtros</label>
                                     <el-select id="select" name="selected" value="4" class="block w-full">
                                             <button type="button" class="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-sky-600 sm:text-sm/6">
                                                 <el-selectedcontent class="col-start-1 row-start-1 truncate pr-6">Todas as áreas</el-selectedcontent>
@@ -1100,7 +1079,7 @@
                                                     </span>
                                                 </el-option>
                                             </el-options>
-                                        </el-select>
+                                    </el-select>
                                 </div>
 
                             </div>
@@ -1109,13 +1088,13 @@
                                 Questões (56)
                             </div>
 
-                            <div class="grid grid-cols-3 gap-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 
                                 <div class="border border-gray-200 overflow-hidden rounded-lg bg-white shadow-xs hover:shadow-md p-4 cursor-pointer space-y-4">
                                     <div class="flex justify-between">
                                         <div class="flex gap-2">
                                             <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 1</span>
-                                            <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Matemática</span>
+                                            <span class="hidden sm:inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Matemática</span>
                                         </div>
                                         <span class="inline-flex items-center rounded-md bg-green-100 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-gray-500/10">Gabarito Mantido</span>
                                     </div>
@@ -1133,7 +1112,7 @@
                                     <div class="flex justify-between">
                                         <div class="flex gap-2">
                                             <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 2</span>
-                                            <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Matemática</span>
+                                            <span class="hidden sm:inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Matemática</span>
                                         </div>
                                         <span class="inline-flex items-center rounded-md bg-green-100 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-gray-500/10">Gabarito Mantido</span>
                                     </div>
@@ -1151,7 +1130,7 @@
                                     <div class="flex justify-between">
                                         <div class="flex gap-2">
                                             <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 3</span>
-                                            <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Português</span>
+                                            <span class="hidden sm:inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Português</span>
                                         </div>
                                         <span class="inline-flex items-center rounded-md bg-yellow-100 px-2 py-1 text-xs font-medium text-yellow-700 inset-ring inset-ring-yellow-500/10">Gabarito Alterado</span>
                                     </div>
@@ -1169,7 +1148,7 @@
                                     <div class="flex justify-between">
                                         <div class="flex gap-2">
                                             <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 4</span>
-                                            <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">História</span>
+                                            <span class="hidden sm:inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">História</span>
                                         </div>
                                         <span class="inline-flex items-center rounded-md bg-red-100 px-2 py-1 text-xs font-medium text-red-700 inset-ring inset-ring-red-500/10">Gabarito Anulada</span>
                                     </div>
