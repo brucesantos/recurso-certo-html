@@ -8,7 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
 </head>
 <body class="h-full">
-    <div class="h-full bg-gray-100">
+    <div class="min-h-screen bg-gray-100">
         <nav class="border-b border-gray-200 bg-white">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="flex h-16 justify-between">
@@ -207,7 +207,7 @@
                     </div>
                 </div>
 
-                <div class="flex gap-6">
+                <div id="inscricao-info" class="flex gap-6" style="display: none;">
                     <div class="flex gap-2 items-center">
                         <p class="text-sm">Nº de Inscrição:</p>
                         <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 inset-ring inset-ring-gray-500/10">387283876734</span>
@@ -383,7 +383,7 @@
 
                                                 <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
                                                     <h3 id="dialog-title" class="text-base font-semibold text-gray-900">Confirmar Exclusão</h3>
-                                                    <button type="button" id="btn-fechar-modal" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                                                    <button type="button" command="close" commandfor="deletarRecurso" aria-label="Fechar" class="text-gray-400 hover:text-gray-600 focus:outline-none">
                                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                                                         </svg>
@@ -418,7 +418,7 @@
 
                                                 <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
                                                     <h3 id="dialog-title" class="text-base font-semibold text-gray-900">Interpor Novo Recurso</h3>
-                                                    <button type="button" id="btn-fechar-modal" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                                                    <button type="button" command="close" commandfor="novoRecurso" aria-label="Fechar" class="text-gray-400 hover:text-gray-600 focus:outline-none">
                                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                                                         </svg>
@@ -593,7 +593,14 @@
                                                             <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Alteração de gabarito</span>
                                                         </div>
                                                     </div>
-                                                    <span class="inline-flex items-center rounded-md bg-green-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Respondido</span>
+                                                    <div class="flex items-center gap-3">
+                                                        <span class="inline-flex items-center rounded-md bg-green-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Respondido</span>
+                                                        <button type="button" command="close" commandfor="detalheRespondido" aria-label="Fechar" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                                 
                                                 <div class="max-h-[500px] overflow-auto p-4 space-y-4">
@@ -654,7 +661,7 @@
                                                 </div>
 
                                                 <div class="flex p-4 border-t border-gray-100">
-                                                    <button type="button" id="btn-fechar-detalhe" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:inset-ring-sky-500 hover:bg-sky-600 hover:text-white ml-auto">Fechar</button>
+                                                    <button type="button" command="close" commandfor="detalheRespondido" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:inset-ring-sky-500 hover:bg-sky-600 hover:text-white ml-auto">Fechar</button>
                                                 </div>
 
                                             </div>
@@ -682,7 +689,14 @@
                                                             <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Alteração de gabarito</span>
                                                         </div>
                                                     </div>
-                                                    <span class="inline-flex items-center rounded-md bg-yellow-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-yellow-500/10">Em análise</span>
+                                                    <div class="flex items-center gap-3">
+                                                        <span class="inline-flex items-center rounded-md bg-yellow-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-yellow-500/10">Em análise</span>
+                                                        <button type="button" command="close" commandfor="detalheAnalise" aria-label="Fechar" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                                 
                                                 <div class="max-h-[500px] overflow-auto p-4 space-y-4">
@@ -766,7 +780,14 @@
                                                             <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Alteração de gabarito</span>
                                                         </div>
                                                     </div>
-                                                    <span class="inline-flex items-center rounded-md bg-red-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-red-500/10">Excluído</span>
+                                                    <div class="flex items-center gap-3">
+                                                        <span class="inline-flex items-center rounded-md bg-red-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-red-500/10">Excluído</span>
+                                                        <button type="button" command="close" commandfor="detalheExcluido" aria-label="Fechar" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                                 
                                                 <div class="max-h-[500px] overflow-auto p-4 space-y-4">
@@ -846,7 +867,7 @@
                                 <div class="flex flex-col">
                                     <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
                                         <h3 id="dialog-title-anulada" class="text-lg font-semibold text-gray-900">Detalhe da Questão</h3>
-                                        <button type="button" command="hide-modal" commandfor="dialog-anulada" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                                        <button type="button" command="close" commandfor="dialog-anulada" class="text-gray-400 hover:text-gray-600 focus:outline-none" aria-label="Fechar">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                                             </svg>
@@ -897,7 +918,7 @@
                                 <div class="flex flex-col">
                                     <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
                                         <h3 id="dialog-title-alterado" class="text-lg font-semibold text-gray-900">Detalhe da Questão</h3>
-                                        <button type="button" command="hide-modal" commandfor="dialog-alterado" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                                        <button type="button" command="close" commandfor="dialog-alterado" class="text-gray-400 hover:text-gray-600 focus:outline-none" aria-label="Fechar">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                                             </svg>
@@ -942,7 +963,7 @@
                                 <div class="flex flex-col">
                                     <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
                                         <h3 id="dialog-title-mantido" class="text-lg font-semibold text-gray-900">Detalhe da Questão</h3>
-                                        <button type="button" command="hide-modal" commandfor="dialog-mantido" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                                        <button type="button" command="close" commandfor="dialog-mantido" class="text-gray-400 hover:text-gray-600 focus:outline-none" aria-label="Fechar">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                                             </svg>
@@ -1206,6 +1227,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             const emptyState = document.getElementById('empty-state');
             const mainContent = document.getElementById('main-content');
+            const inscricaoInfo = document.getElementById('inscricao-info');
             const concursoSelect = document.getElementById('concurso-select');
             const cargoSelect = document.getElementById('cargo-select');
             const turnoSelect = document.getElementById('turno-select');
@@ -1215,6 +1237,7 @@
             // Estado inicial - mostrar empty state e ocultar conteúdo principal
             emptyState.style.display = 'block';
             mainContent.style.display = 'none';
+            if (inscricaoInfo) inscricaoInfo.style.display = 'none';
             
             // Função para atualizar status
             function updateStatus() {
@@ -1242,9 +1265,11 @@
                 if (concursoSelected && cargoSelected) {
                     emptyState.style.display = 'none';
                     mainContent.style.display = 'block';
+                    if (inscricaoInfo) inscricaoInfo.style.display = 'flex';
                 } else {
                     emptyState.style.display = 'block';
                     mainContent.style.display = 'none';
+                    if (inscricaoInfo) inscricaoInfo.style.display = 'none';
                 }
             }
             
@@ -1561,7 +1586,7 @@
                     }
                     
                     if (!valido) {
-                        alert(mensagem);
+                        showToast(mensagem, 'error');
                         return;
                     }
                     
@@ -1577,7 +1602,7 @@
                     fecharModal();
                     
                     // Mostrar mensagem de sucesso
-                    alert('Recurso interposto com sucesso!');
+                    showToast('Recurso interposto com sucesso!', 'success');
                 });
             }
             
@@ -1714,6 +1739,53 @@
             // Configurar todos os modais
             todosOsModais.forEach(configurarModal);
         });
+    </script>
+
+    <!-- Toast container -->
+    <div id="toast-root" class="fixed inset-0 pointer-events-none z-[1000]">
+      <div class="absolute top-4 right-4 flex flex-col gap-2"></div>
+    </div>
+
+    <script>
+    function showToast(message, type = 'success', timeoutMs = 4000) {
+        const root = document.querySelector('#toast-root > div');
+        if (!root) return;
+
+        const base =
+            'pointer-events-auto w-[min(92vw,380px)] rounded-lg border px-4 py-3 shadow-lg text-sm ' +
+            'transition-all duration-200 bg-white border-gray-200 text-gray-900 ' +
+            'dark:bg-gray-900 dark:border-gray-800 dark:text-gray-100';
+
+        const variants = {
+            success: 'border-emerald-200/60 bg-emerald-50 text-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-100',
+            error: 'border-red-200/60 bg-red-50 text-red-900 dark:bg-red-950/40 dark:text-red-100',
+            warning: 'border-amber-200/60 bg-amber-50 text-amber-900 dark:bg-amber-950/40 dark:text-amber-100',
+            info: 'border-sky-200/60 bg-sky-50 text-sky-900 dark:bg-sky-950/40 dark:text-sky-100',
+        };
+
+        const el = document.createElement('div');
+        el.className = `${base} ${variants[type] ?? ''} translate-y-[-6px] opacity-0`;
+        el.innerHTML = `<div class="flex items-start gap-3">
+<div class="mt-0.5">${type === 'success' ? '✅' : type === 'error' ? '⛔' : type === 'warning' ? '⚠️' : 'ℹ️'}</div>
+<div class="flex-1">${message}</div>
+<button class="ml-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">✕</button>
+</div>`;
+
+        const closeBtn = el.querySelector('button');
+        const remove = () => {
+            el.classList.add('opacity-0', 'translate-y-[-6px]');
+            setTimeout(() => el.remove(), 180);
+        };
+        closeBtn.addEventListener('click', remove);
+
+        root.appendChild(el);
+        requestAnimationFrame(() => {
+            el.classList.remove('translate-y-[-6px]', 'opacity-0');
+            el.classList.add('translate-y-0', 'opacity-100');
+        });
+
+        if (timeoutMs > 0) setTimeout(remove, timeoutMs);
+    }
     </script>
 
 </body>
