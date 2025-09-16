@@ -84,3 +84,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 100);
 });
+
+// Modal functionality moved to recursos.html for better integration

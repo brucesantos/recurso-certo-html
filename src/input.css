@@ -35,3 +35,26 @@ el-dropdown el-menu {
   right: 0;
   z-index: 50;
 }
+
+/* Estilos para campos desabilitados */
+el-select[disabled] button {
+  background-color: #f9fafb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+el-select[disabled] button:hover {
+  background-color: #f9fafb;
+}
+
+/* Status indicators */
+.status-selected {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+
+.status-pending {
+  background-color: #f3f4f6;
+  border-color: #d1d5db;
+}

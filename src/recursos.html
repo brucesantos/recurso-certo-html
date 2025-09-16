@@ -33,9 +33,6 @@
                             </button>
 
                             <el-menu anchor="bottom end" popover class="w-48 origin-top-right rounded-md bg-white py-1 shadow-lg outline outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden">Recursos</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden">Gabarito</a>
-                                <hr>
                                 <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden">Sair</a>
                             </el-menu>
                         </el-dropdown>
@@ -92,8 +89,8 @@
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
                     <div>
-                        <label for="select" class="block text-sm/6 font-medium text-gray-900">Concurso</label>
-                        <el-select id="select" name="selected" value="4" class="mt-2 block">
+                        <label for="concurso-select" class="block text-sm/6 font-medium text-gray-900">Concurso</label>
+                        <el-select id="concurso-select" name="concurso" class="mt-2 block">
                         <button type="button" class="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-indigo-600 sm:text-sm/6">
                             <el-selectedcontent class="col-start-1 row-start-1 truncate pr-6">Selecione o concurso</el-selectedcontent>
                             <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4">
@@ -124,8 +121,8 @@
                     </div>
                     
                     <div>
-                        <label for="select" class="block text-sm/6 font-medium text-gray-900">Cargo</label>
-                        <el-select id="select" name="selected" value="4" class="mt-2 block">
+                        <label for="cargo-select" class="block text-sm/6 font-medium text-gray-900">Cargo</label>
+                        <el-select id="cargo-select" name="cargo" class="mt-2 block" disabled>
                             <button type="button" class="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-indigo-600 sm:text-sm/6">
                                 <el-selectedcontent class="col-start-1 row-start-1 truncate pr-6">Selecione o cargo</el-selectedcontent>
                                 <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4">
@@ -171,10 +168,10 @@
                     </div>
 
                     <div>
-                        <label for="select" class="block text-sm/6 font-medium text-gray-900">Turno</label>
-                        <el-select id="select" name="selected" value="4" class="mt-2 block">
+                        <label for="turno-select" class="block text-sm/6 font-medium text-gray-900">Turno</label>
+                        <el-select id="turno-select" name="turno" class="mt-2 block" disabled>
                             <button type="button" class="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-indigo-600 sm:text-sm/6">
-                                <el-selectedcontent class="col-start-1 row-start-1 truncate pr-6">Selecione o turno</el-selectedcontent>
+                                <el-selectedcontent class="col-start-1 row-start-1 truncate pr-6">Não aplicável</el-selectedcontent>
                                 <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4">
                                 <path d="M5.22 10.22a.75.75 0 0 1 1.06 0L8 11.94l1.72-1.72a.75.75 0 1 1 1.06 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 0 1 0-1.06ZM10.78 5.78a.75.75 0 0 1-1.06 0L8 4.06 6.28 5.78a.75.75 0 0 1-1.06-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
                                 </svg>
@@ -223,18 +220,52 @@
 
             </div>
 
-            <div class="rounded-md bg-blue-50 p-4 border border-blue-300">
-                <div class="flex">
-                    <div class="shrink-0">
-                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 text-blue-400">
-                            <path d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z" clip-rule="evenodd" fill-rule="evenodd" />
+            <!-- Empty State -->
+            <div id="empty-state" class="border border-gray-200 overflow-hidden rounded-lg bg-white shadow-sm p-8 text-center">
+                <div class="flex flex-col items-center space-y-4">
+                    <!-- Ícone -->
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center border-2 border-blue-200">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                         </svg>
                     </div>
-                    <div class="ml-3 flex-1 md:flex md:justify-between">
-                        <p class="text-sm text-blue-700"><strong>Prazo para recursos:</strong> Os recursos podem ser criados até o dia 21 de Novembro, 2025 às 23:59.</p>
+                    
+                    <!-- Título -->
+                    <h3 class="text-xl font-bold text-gray-900">Selecione o concurso, cargo e turno</h3>
+                    
+                    <!-- Instruções -->
+                    <p class="text-gray-600 max-w-md">
+                        Para visualizar seus recursos e informações do concurso, primeiro selecione o concurso, depois o cargo e por fim o turno de interesse.
+                    </p>
+                    
+                    <!-- Status indicators -->
+                    <div class="flex flex-col space-y-2 mt-6">
+                        <div class="flex items-center space-x-3">
+                            <div id="status-concurso" class="w-4 h-4 rounded-full border-2 border-gray-300 bg-white"></div>
+                            <span class="text-sm text-gray-600">1. Concurso selecionado</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div id="status-cargo" class="w-4 h-4 rounded-full border-2 border-gray-300 bg-white"></div>
+                            <span class="text-sm text-gray-600">2. Cargo selecionado</span>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Conteúdo que só aparece após seleção -->
+            <div id="main-content" style="display: none;">
+                <div class="rounded-md bg-blue-50 p-4 border border-blue-300">
+                    <div class="flex">
+                        <div class="shrink-0">
+                            <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 text-blue-400">
+                                <path d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z" clip-rule="evenodd" fill-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="ml-3 flex-1 md:flex md:justify-between">
+                            <p class="text-sm text-blue-700"><strong>Prazo para recursos:</strong> Os recursos podem ser criados até o dia 21 de Novembro, 2025 às 23:59.</p>
+                        </div>
+                    </div>
+                </div>
 
             <!-- TABS -->
             <div>
@@ -327,26 +358,32 @@
 
                                         <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
                                             <h3 id="dialog-title" class="text-base font-semibold text-gray-900">Interpor Novo Recurso</h3>
+                                            <button type="button" id="btn-fechar-modal" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                </svg>
+                                            </button>
                                         </div>
                                         
-                                        <div id="selecionaTipo" class="hidden"> 
+                                        <!-- ETAPA 1: Seleção do Tipo de Recurso -->
+                                        <div id="etapa1-selecionaTipo" class="etapa-modal"> 
                                             <div class="max-h-[500px] overflow-auto p-4 space-y-4">
 
                                                 <div>
-                                                    <p>Tipo de Recurso</p>
+                                                    <p class="text-lg font-medium text-gray-900">Tipo de Recurso</p>
                                                     <p class="text-sm text-gray-500">Selecione o tipo de recurso que deseja interpor:</p>
                                                 </div>
                                                 
-                                                <fieldset aria-label="Privacy setting" class="-space-y-px rounded-md bg-white">
-                                                    <label aria-label="Public access" aria-description="This project would be available to anyone who has the link" class="group flex border border-gray-200 p-4 first:rounded-tl-md first:rounded-tr-md last:rounded-br-md last:rounded-bl-md focus:outline-hidden has-checked:relative has-checked:border-sky-200 has-checked:bg-sky-50">
-                                                        <input type="radio" name="privacy-setting" value="public" checked class="relative mt-0.5 size-4 shrink-0 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-sky-600 checked:bg-sky-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden" />
+                                                <fieldset aria-label="Tipo de recurso" class="-space-y-px rounded-md bg-white">
+                                                    <label class="group flex border border-gray-200 p-4 first:rounded-tl-md first:rounded-tr-md last:rounded-br-md last:rounded-bl-md focus:outline-hidden has-checked:relative has-checked:border-sky-200 has-checked:bg-sky-50 cursor-pointer">
+                                                        <input type="radio" name="tipo-recurso" value="anulacao" class="relative mt-0.5 size-4 shrink-0 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-sky-600 checked:bg-sky-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden" />
                                                         <span class="ml-3 flex flex-col">
                                                             <span class="block text-md font-medium text-gray-900 group-has-checked:text-sky-900">Anulação de Questão</span>
                                                             <span class="block text-sm text-gray-500 group-has-checked:text-sky-700">Quando o participante entende que a questão é inválida ou apresenta erro, pedindo que ela seja desconsiderada.</span>
                                                         </span>
                                                     </label>
-                                                    <label aria-label="Private to project members" aria-description="Only members of this project would be able to access" class="group flex border border-gray-200 p-4 first:rounded-tl-md first:rounded-tr-md last:rounded-br-md last:rounded-bl-md focus:outline-hidden has-checked:relative has-checked:border-sky-200 has-checked:bg-sky-50">
-                                                        <input type="radio" name="privacy-setting" value="private-to-project-members" class="relative mt-0.5 size-4 shrink-0 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-sky-600 checked:bg-sky-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden" />
+                                                    <label class="group flex border border-gray-200 p-4 first:rounded-tl-md first:rounded-tr-md last:rounded-br-md last:rounded-bl-md focus:outline-hidden has-checked:relative has-checked:border-sky-200 has-checked:bg-sky-50 cursor-pointer">
+                                                        <input type="radio" name="tipo-recurso" value="alteracao" class="relative mt-0.5 size-4 shrink-0 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-sky-600 checked:bg-sky-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden" />
                                                         <span class="ml-3 flex flex-col">
                                                             <span class="block text-md font-medium text-gray-900 group-has-checked:text-sky-900">Alteração de Gabarito</span>
                                                             <span class="block text-sm text-gray-500 group-has-checked:text-sky-700">Quando o participante acredita que a resposta correta indicada está errada e sugere outra alternativa como correta.</span>
@@ -354,18 +391,21 @@
                                                     </label>
                                                 </fieldset>
 
-
                                             </div>
 
                                             <div class="flex p-4 border-t border-gray-100">
-                                                <button type="button" command="close" commandfor="dialog" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-sky-600 shadow-xs inset-ring inset-ring-sky-500 hover:bg-sky-600 hover:text-white ml-auto">Continuar</button>
+                                                <button type="button" id="btn-continuar-etapa1" class="rounded-md bg-sky-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500 ml-auto disabled:bg-gray-300 disabled:cursor-not-allowed" disabled>Continuar</button>
                                             </div>
                                         </div>
                                         
-                                        <div id="anulacaoQuestao">
+                                        <!-- ETAPA 2: Preenchimento das Informações -->
+                                        <div id="etapa2-preenchimento" class="etapa-modal hidden">
                                             <div class="max-h-[500px] overflow-auto p-4 space-y-4">
 
-                                                <p>Anulação de questão</p>
+                                                <div>
+                                                    <p id="etapa2-titulo" class="text-lg font-medium text-gray-900">Preenchimento das Informações</p>
+                                                    <p class="text-sm text-gray-500">Preencha os dados necessários para interpor o recurso</p>
+                                                </div>
                                                 
                                                 <div class="space-y-4">
 
@@ -431,10 +471,30 @@
                                                         </el-select>
                                                     </div>
 
+                                                    <!-- Campo de Alternativa Correta - só aparece para "Alteração de Gabarito" -->
+                                                    <div id="campo-alternativa" class="hidden">
+                                                        <label class="block text-sm/6 font-medium text-gray-900">Alternativa Correta Proposta <span class="text-red-500">*</span></label>
+                                                        <p class="text-sm text-gray-500 mt-1">Selecione qual alternativa você considera como a resposta correta:</p>
+                                                        <div class="mt-3">
+                                                            <div class="isolate inline-flex rounded-md shadow-xs">
+                                                                <button type="button" class="alternativa-btn relative inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10" data-alternativa="A">A</button>
+                                                                <button type="button" class="alternativa-btn relative -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10" data-alternativa="B">B</button>
+                                                                <button type="button" class="alternativa-btn relative -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10" data-alternativa="C">C</button>
+                                                                <button type="button" class="alternativa-btn relative -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10" data-alternativa="D">D</button>
+                                                                <button type="button" class="alternativa-btn relative -ml-px inline-flex items-center rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10" data-alternativa="E">E</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                     <div>
                                                         <label for="comment" class="block text-sm/6 font-medium text-gray-900">Argumentação</label>
                                                         <div class="mt-2">
-                                                            <textarea id="comment" name="comment" rows="4" placeholder="Digite sua argumentação lógica e consistente aqui. Exemplo: A questão apresenta ambiguidade na interpretação dos conceitos apresentados, uma vez que as alternativas B e C podem ser consideradas corretas segundo os guidelines mais recentes da literatura médica..." class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600 sm:text-sm/6"></textarea>
+                                                            <textarea id="comment" name="comment" rows="4" maxlength="500" placeholder="Digite sua argumentação lógica e consistente aqui. Exemplo: A questão apresenta ambiguidade na interpretação dos conceitos apresentados, uma vez que as alternativas B e C podem ser consideradas corretas segundo os guidelines mais recentes da literatura médica..." class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600 sm:text-sm/6"></textarea>
+                                                        </div>
+                                                        <!-- Contador de caracteres -->
+                                                        <div id="char-counter-container" class="mt-1 flex justify-between text-xs text-gray-500">
+                                                            <span id="char-count">0/500</span>
+                                                            <span>caracteres</span>
                                                         </div>
                                                     </div>
                                                     
@@ -443,108 +503,8 @@
                                             </div>
 
                                             <div class="flex justify-between p-4 border-t border-gray-100">
-                                                <button type="button" command="close" commandfor="dialog" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-sky-600 shadow-xs inset-ring inset-ring-sky-500 hover:bg-sky-600 hover:text-white">Voltar</button>
-                                                <button type="button" command="close" commandfor="dialog" class="flex items-center gap-2 rounded-md bg-sky-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-sky-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Interpor Recurso</button>
-                                            </div>
-                                        </div>
-                                        
-                                        <div id="anulacaoGabarito">
-                                            <div class="max-h-[500px] overflow-auto p-4 space-y-4">
-
-                                                <p>Anulação de Gabarito</p>
-                                                
-                                                <div class="space-y-4">
-
-                                                    <div>
-                                                        <label for="registerNumber" class="block text-sm/6 font-medium text-gray-900">Nº de Inscrição</label>
-                                                        <div class="mt-2">
-                                                            <input disabled id="registerNumber" type="text" name="registerNumber" required autocomplete="registerNumber" placeholder="" value="387283876734" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600 sm:text-sm/6" />
-                                                        </div>
-                                                    </div>
-
-                                                    <div>
-                                                        <label for="select" class="block text-sm/6 font-medium text-gray-900">Questão</label>
-                                                        <el-select id="select" name="selected" value="4" class="mt-2 block">
-                                                            <button type="button" class="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-sky-600 sm:text-sm/6">
-                                                                <el-selectedcontent class="col-start-1 row-start-1 truncate pr-6">Selecione a questão</el-selectedcontent>
-                                                                <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4">
-                                                                <path d="M5.22 10.22a.75.75 0 0 1 1.06 0L8 11.94l1.72-1.72a.75.75 0 1 1 1.06 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 0 1 0-1.06ZM10.78 5.78a.75.75 0 0 1-1.06 0L8 4.06 6.28 5.78a.75.75 0 0 1-1.06-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
-                                                                </svg>
-                                                            </button>
-
-                                                            <el-options anchor="bottom start" popover class="max-h-60 w-(--button-width) overflow-auto rounded-md bg-white py-1 text-base shadow-lg outline-1 outline-black/5 [--anchor-gap:--spacing(1)] data-leave:transition data-leave:transition-discrete data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm">
-                                                                <el-option value="6" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
-                                                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Questão 1</span>
-                                                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
-                                                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
-                                                                            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
-                                                                        </svg>
-                                                                    </span>
-                                                                </el-option>
-                                                                <el-option value="7" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
-                                                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Questão 2</span>
-                                                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
-                                                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
-                                                                            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
-                                                                        </svg>
-                                                                    </span>
-                                                                </el-option>
-                                                                <el-option value="8" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
-                                                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Questão 3</span>
-                                                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
-                                                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
-                                                                            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
-                                                                        </svg>
-                                                                    </span>
-                                                                </el-option>
-                                                                <el-option value="9" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
-                                                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Questão 4</span>
-                                                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
-                                                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
-                                                                            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
-                                                                        </svg>
-                                                                    </span>
-                                                                </el-option>
-                                                                <el-option value="10" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
-                                                                    <span class="block truncate font-normal group-aria-selected/option:font-semibold">Questão 5</span>
-                                                                    <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
-                                                                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
-                                                                            <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
-                                                                        </svg>
-                                                                    </span>
-                                                                </el-option>
-                                                            </el-options>
-                                                        </el-select>
-                                                    </div>
-
-                                                    <div>
-                                                        <label for="comment" class="block text-sm/6 font-medium text-gray-900">Argumentação</label>
-                                                        <div class="mt-2">
-                                                            <textarea id="comment" name="comment" rows="4" placeholder="Digite sua argumentação lógica e consistente aqui. Exemplo: A questão apresenta ambiguidade na interpretação dos conceitos apresentados, uma vez que as alternativas B e C podem ser consideradas corretas segundo os guidelines mais recentes da literatura médica..." class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600 sm:text-sm/6"></textarea>
-                                                        </div>
-                                                    </div>
-
-                                                    <div>
-                                                        <label for="registerNumber" class="block text-sm/6 font-medium text-gray-900">Alternativa Correta Proposta</label>
-                                                        <p>Selecione qual alternativa você considera como a resposta correta:</p>
-
-                                                        <span class="isolate inline-flex rounded-md shadow-xs">
-                                                            <button type="button" class="relative inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 inset-ring-1 inset-ring-gray-300 hover:bg-gray-50 focus:z-10">A</button>
-                                                            <button type="button" class="relative -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 inset-ring-1 inset-ring-gray-300 hover:bg-gray-50 focus:z-10">B</button>
-                                                            <button type="button" class="relative -ml-px inline-flex items-center rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 inset-ring-1 inset-ring-gray-300 hover:bg-gray-50 focus:z-10">C</button>
-                                                            <button type="button" class="relative -ml-px inline-flex items-center rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 inset-ring-1 inset-ring-gray-300 hover:bg-gray-50 focus:z-10">D</button>
-                                                            <button type="button" class="relative -ml-px inline-flex items-center rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 inset-ring-1 inset-ring-gray-300 hover:bg-gray-50 focus:z-10">E</button>
-                                                        </span>
-
-                                                    </div>
-                                                    
-                                                </div>
-
-                                            </div>
-
-                                            <div class="flex justify-between p-4 border-t border-gray-100">
-                                                <button type="button" command="close" commandfor="dialog" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-sky-600 shadow-xs inset-ring inset-ring-sky-500 hover:bg-sky-600 hover:text-white">Voltar</button>
-                                                <button type="button" command="close" commandfor="dialog" class="flex items-center gap-2 rounded-md bg-sky-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-sky-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Interpor Recurso</button>
+                                                <button type="button" id="btn-voltar-etapa2" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-sky-600 shadow-xs ring-1 ring-inset ring-sky-500 hover:bg-sky-50 focus:outline-none focus:ring-2 focus:ring-sky-500">Voltar</button>
+                                                <button type="button" id="btn-interpor-recurso" class="flex items-center gap-2 rounded-md bg-sky-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500">Interpor Recurso</button>
                                             </div>
                                         </div>
 
@@ -634,7 +594,7 @@
                                         </div>
 
                                         <div class="flex p-4 border-t border-gray-100">
-                                            <button type="button" command="close" commandfor="novoRecurso" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-indigo-600 shadow-xs inset-ring inset-ring-indigo-500 hover:bg-indigo-600 hover:text-white ml-auto">Fechar</button>
+                                            <button type="button" id="btn-fechar-detalhe" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-indigo-600 shadow-xs inset-ring inset-ring-indigo-500 hover:bg-indigo-600 hover:text-white ml-auto">Fechar</button>
                                         </div>
 
                                     </div>
@@ -646,6 +606,144 @@
 
                 </div>
             </div>
+
+        <!-- Modal para Questão Anulada -->
+        <dialog id="dialog-anulada" aria-labelledby="dialog-title-anulada" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+            <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
+
+            <div tabindex="0" class="flex items-center justify-center focus:outline-none p-4">
+                <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in w-full max-w-md">
+                    
+                    <div class="flex flex-col">
+                        <div class="flex justify-between items-baseline p-6 border-b border-gray-100">
+                            <h3 id="dialog-title-anulada" class="text-lg font-semibold text-gray-900">Detalhe da Questão</h3>
+                            <button type="button" command="hide-modal" commandfor="dialog-anulada" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="p-6 space-y-6">
+                            <!-- Question info -->
+                            <div class="flex justify-between items-start">
+                                <div class="flex gap-2">
+                                    <span class="inline-flex items-center rounded-full bg-gray-900 px-3 py-1 text-sm font-medium text-white">Questão 16</span>
+                                    <span class="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-900">Matemática</span>
+                                </div>
+                                <span class="inline-flex items-center rounded-full bg-red-100 px-3 py-1 text-sm font-medium text-red-700">Questão Anulada</span>
+                            </div>
+
+                            <!-- Answers -->
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm text-gray-600">Resposta Preliminar:</span>
+                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 text-sm font-medium text-gray-900">C</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm text-gray-600">Resposta Definitiva:</span>
+                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-100 text-sm font-medium text-red-900">X</span>
+                                </div>
+                            </div>
+
+                            <!-- Cancellation message -->
+                            <div class="flex items-start gap-3 p-4 bg-red-50 rounded-lg">
+                                <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <p class="text-sm text-red-700">Esta questão foi anulada e não será considerada na pontuação final</p>
+                            </div>
+                        </div>
+                    </div>
+                </el-dialog-panel>
+            </div>
+        </dialog>
+
+        <!-- Modal para Gabarito Alterado -->
+        <dialog id="dialog-alterado" aria-labelledby="dialog-title-alterado" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+            <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
+
+            <div tabindex="0" class="flex items-center justify-center focus:outline-none p-4">
+                <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in w-full max-w-md">
+                    
+                    <div class="flex flex-col">
+                        <div class="flex justify-between items-baseline p-6 border-b border-gray-100">
+                            <h3 id="dialog-title-alterado" class="text-lg font-semibold text-gray-900">Detalhe da Questão</h3>
+                            <button type="button" command="hide-modal" commandfor="dialog-alterado" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="p-6 space-y-6">
+                            <!-- Question info -->
+                            <div class="flex justify-between items-start">
+                                <div class="flex gap-2">
+                                    <span class="inline-flex items-center rounded-full bg-gray-900 px-3 py-1 text-sm font-medium text-white">Questão 11</span>
+                                    <span class="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-900">Matemática</span>
+                                </div>
+                                <span class="inline-flex items-center rounded-full bg-yellow-100 px-3 py-1 text-sm font-medium text-yellow-700">Gabarito Alterado</span>
+                            </div>
+
+                            <!-- Answers -->
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm text-gray-600">Resposta Preliminar:</span>
+                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 text-sm font-medium text-gray-900">A</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm text-gray-600">Resposta Definitiva:</span>
+                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 text-sm font-medium text-gray-900">A</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </el-dialog-panel>
+            </div>
+        </dialog>
+
+        <!-- Modal para Gabarito Mantido -->
+        <dialog id="dialog-mantido" aria-labelledby="dialog-title-mantido" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+            <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
+
+            <div tabindex="0" class="flex items-center justify-center focus:outline-none p-4">
+                <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in w-full max-w-md">
+                    
+                    <div class="flex flex-col">
+                        <div class="flex justify-between items-baseline p-6 border-b border-gray-100">
+                            <h3 id="dialog-title-mantido" class="text-lg font-semibold text-gray-900">Detalhe da Questão</h3>
+                            <button type="button" command="hide-modal" commandfor="dialog-mantido" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="p-6 space-y-6">
+                            <!-- Question info -->
+                            <div class="flex justify-between items-start">
+                                <div class="flex gap-2">
+                                    <span class="inline-flex items-center rounded-full bg-gray-900 px-3 py-1 text-sm font-medium text-white">Questão 8</span>
+                                    <span class="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-900">Matemática</span>
+                                </div>
+                                <span class="inline-flex items-center rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-700">Gabarito Mantido</span>
+                            </div>
+
+                            <!-- Answers -->
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm text-gray-600">Resposta Preliminar:</span>
+                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 text-sm font-medium text-gray-900">B</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm text-gray-600">Resposta Definitiva:</span>
+                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 text-sm font-medium text-gray-900">B</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </el-dialog-panel>
+            </div>
+        </dialog>
 
             <div id="gabarito" class="tab-content">
                 <div class="border border-gray-200 overflow-hidden rounded-lg bg-white shadow-sm p-6 space-y-6 pb-0">
@@ -721,7 +819,7 @@
                                 <div class="flex gap-2">
                                     <p>Resposta:</p> <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">A</span>
                                 </div>
-                                <button command="show-modal" commandfor="dialog" type="button" class="rounded-lg bg-white p-3 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:bg-indigo-600 hover:text-white hover:inset-ring-indigo-600">
+                                <button command="show-modal" commandfor="dialog-mantido" type="button" class="rounded-lg bg-white p-3 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:bg-indigo-600 hover:text-white hover:inset-ring-indigo-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye h-4 w-4"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
                                 </button>
                             </div>
@@ -739,7 +837,7 @@
                                 <div class="flex gap-2">
                                     <p>Resposta:</p> <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">B</span>
                                 </div>
-                                <button command="show-modal" commandfor="dialog" type="button" class="rounded-lg bg-white p-3 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:bg-indigo-600 hover:text-white hover:inset-ring-indigo-600">
+                                <button command="show-modal" commandfor="dialog-mantido" type="button" class="rounded-lg bg-white p-3 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:bg-indigo-600 hover:text-white hover:inset-ring-indigo-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye h-4 w-4"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
                                 </button>
                             </div>
@@ -757,7 +855,7 @@
                                 <div class="flex gap-2">
                                     <p>Resposta:</p> <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">B</span>
                                 </div>
-                                <button command="show-modal" commandfor="dialog" type="button" class="rounded-lg bg-white p-3 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:bg-indigo-600 hover:text-white hover:inset-ring-indigo-600">
+                                <button command="show-modal" commandfor="dialog-alterado" type="button" class="rounded-lg bg-white p-3 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:bg-indigo-600 hover:text-white hover:inset-ring-indigo-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye h-4 w-4"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
                                 </button>
                             </div>
@@ -775,7 +873,7 @@
                                 <div class="flex gap-2">
                                     <p>Resposta:</p> <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">B</span>
                                 </div>
-                                <button command="show-modal" commandfor="dialog" type="button" class="rounded-lg bg-white p-3 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:bg-indigo-600 hover:text-white hover:inset-ring-indigo-600">
+                                <button command="show-modal" commandfor="dialog-anulada" type="button" class="rounded-lg bg-white p-3 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:bg-indigo-600 hover:text-white hover:inset-ring-indigo-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye h-4 w-4"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
                                 </button>
                             </div>
@@ -786,10 +884,13 @@
                 </div>
             </div>
 
+            </div> <!-- Fim do main-content -->
+
         </main>
     </div>
 
     <script>
+        // Tab functionality
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
 
@@ -802,7 +903,7 @@
             document.querySelectorAll('.tab-button')
                 .forEach(el => {
                 el.classList.remove('active', 'border-indigo-500', 'text-indigo-600');
-                el.classList.add('border-transparent', 'text-gray-500'); // 👈 add "inactive" classes
+                el.classList.add('border-transparent', 'text-gray-500');
                 });
 
             // Deactivate ALL contents
@@ -811,9 +912,130 @@
 
             // Activate clicked tab and content
             button.classList.add('active', 'border-indigo-500', 'text-indigo-600');
-            button.classList.remove('border-transparent', 'text-gray-500'); // 👈 remove inactive from active tab
+            button.classList.remove('border-transparent', 'text-gray-500');
             targetContent.classList.add('active');
             });
+        });
+
+        // Empty state and form control
+        document.addEventListener('DOMContentLoaded', () => {
+            const emptyState = document.getElementById('empty-state');
+            const mainContent = document.getElementById('main-content');
+            const concursoSelect = document.getElementById('concurso-select');
+            const cargoSelect = document.getElementById('cargo-select');
+            const turnoSelect = document.getElementById('turno-select');
+            const statusConcurso = document.getElementById('status-concurso');
+            const statusCargo = document.getElementById('status-cargo');
+            
+            // Estado inicial - mostrar empty state e ocultar conteúdo principal
+            emptyState.style.display = 'block';
+            mainContent.style.display = 'none';
+            
+            // Função para atualizar status
+            function updateStatus() {
+                const concursoSelected = concursoSelect.value && concursoSelect.value !== '';
+                const cargoSelected = cargoSelect.value && cargoSelect.value !== '';
+                
+                // Atualizar indicadores de status
+                if (concursoSelected) {
+                    statusConcurso.classList.remove('status-pending');
+                    statusConcurso.classList.add('status-selected');
+                } else {
+                    statusConcurso.classList.remove('status-selected');
+                    statusConcurso.classList.add('status-pending');
+                }
+                
+                if (cargoSelected) {
+                    statusCargo.classList.remove('status-pending');
+                    statusCargo.classList.add('status-selected');
+                } else {
+                    statusCargo.classList.remove('status-selected');
+                    statusCargo.classList.add('status-pending');
+                }
+                
+                // Mostrar/esconder empty state e conteúdo principal
+                if (concursoSelected && cargoSelected) {
+                    emptyState.style.display = 'none';
+                    mainContent.style.display = 'block';
+                } else {
+                    emptyState.style.display = 'block';
+                    mainContent.style.display = 'none';
+                }
+            }
+            
+            // Event listeners para os selects
+            concursoSelect.addEventListener('change', (e) => {
+                const selectedValue = e.target.value;
+                
+                if (selectedValue && selectedValue !== '') {
+                    // Habilitar cargo select
+                    cargoSelect.disabled = false;
+                    cargoSelect.querySelector('button').style.backgroundColor = 'white';
+                    cargoSelect.querySelector('button').style.color = '#111827';
+                    cargoSelect.querySelector('button').style.opacity = '1';
+                    cargoSelect.querySelector('button').style.cursor = 'default';
+                    
+                    // Resetar cargo e turno
+                    cargoSelect.value = '';
+                    cargoSelect.querySelector('el-selectedcontent').textContent = 'Selecione o cargo';
+                    turnoSelect.value = '';
+                    turnoSelect.querySelector('el-selectedcontent').textContent = 'Não aplicável';
+                    turnoSelect.disabled = true;
+                    turnoSelect.querySelector('button').style.backgroundColor = '#f9fafb';
+                    turnoSelect.querySelector('button').style.color = '#9ca3af';
+                    turnoSelect.querySelector('button').style.opacity = '0.6';
+                    turnoSelect.querySelector('button').style.cursor = 'not-allowed';
+                } else {
+                    // Desabilitar cargo e turno
+                    cargoSelect.disabled = true;
+                    cargoSelect.querySelector('button').style.backgroundColor = '#f9fafb';
+                    cargoSelect.querySelector('button').style.color = '#9ca3af';
+                    cargoSelect.querySelector('button').style.opacity = '0.6';
+                    cargoSelect.querySelector('button').style.cursor = 'not-allowed';
+                    
+                    turnoSelect.disabled = true;
+                    turnoSelect.querySelector('button').style.backgroundColor = '#f9fafb';
+                    turnoSelect.querySelector('button').style.color = '#9ca3af';
+                    turnoSelect.querySelector('button').style.opacity = '0.6';
+                    turnoSelect.querySelector('button').style.cursor = 'not-allowed';
+                }
+                
+                updateStatus();
+            });
+            
+            cargoSelect.addEventListener('change', (e) => {
+                const selectedValue = e.target.value;
+                
+                if (selectedValue && selectedValue !== '') {
+                    // Habilitar turno select
+                    turnoSelect.disabled = false;
+                    turnoSelect.querySelector('button').style.backgroundColor = 'white';
+                    turnoSelect.querySelector('button').style.color = '#111827';
+                    turnoSelect.querySelector('button').style.opacity = '1';
+                    turnoSelect.querySelector('button').style.cursor = 'default';
+                    turnoSelect.querySelector('el-selectedcontent').textContent = 'Selecione o turno';
+                    
+                    // Resetar turno
+                    turnoSelect.value = '';
+                } else {
+                    // Desabilitar turno
+                    turnoSelect.disabled = true;
+                    turnoSelect.querySelector('button').style.backgroundColor = '#f9fafb';
+                    turnoSelect.querySelector('button').style.color = '#9ca3af';
+                    turnoSelect.querySelector('button').style.opacity = '0.6';
+                    turnoSelect.querySelector('button').style.cursor = 'not-allowed';
+                    turnoSelect.querySelector('el-selectedcontent').textContent = 'Não aplicável';
+                }
+                
+                updateStatus();
+            });
+            
+            turnoSelect.addEventListener('change', (e) => {
+                updateStatus();
+            });
+            
+            // Estado inicial
+            updateStatus();
         });
 
         const div1 = document.getElementById("div1");
@@ -821,14 +1043,391 @@
         const btn1 = document.getElementById("btn1");
         const btn2 = document.getElementById("btn2");
 
-        btn1.addEventListener("click", () => {
-            div1.classList.add("hidden");
-            div2.classList.remove("hidden");
+        if (btn1 && btn2) {
+            btn1.addEventListener("click", () => {
+                div1.classList.add("hidden");
+                div2.classList.remove("hidden");
+            });
+
+            btn2.addEventListener("click", () => {
+                div2.classList.add("hidden");
+                div1.classList.remove("hidden");
+            });
+        }
+
+        // Modal control functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🚀 Iniciando controle do modal...');
+            
+            // Elementos do modal
+            const modal = document.getElementById('novoRecurso');
+            const modalDetalhe = document.getElementById('detalheRecurso');
+            const etapa1 = document.getElementById('etapa1-selecionaTipo');
+            const etapa2 = document.getElementById('etapa2-preenchimento');
+            const campoAlternativa = document.getElementById('campo-alternativa');
+            const tituloEtapa2 = document.getElementById('etapa2-titulo');
+            
+            // Botões
+            const btnContinuarEtapa1 = document.getElementById('btn-continuar-etapa1');
+            const btnVoltarEtapa2 = document.getElementById('btn-voltar-etapa2');
+            const btnInterporRecurso = document.getElementById('btn-interpor-recurso');
+            const btnFecharModal = document.getElementById('btn-fechar-modal');
+            const btnFecharDetalhe = document.getElementById('btn-fechar-detalhe');
+            
+            // Radio buttons do tipo de recurso
+            const radioAnulacao = document.querySelector('input[name="tipo-recurso"][value="anulacao"]');
+            const radioAlteracao = document.querySelector('input[name="tipo-recurso"][value="alteracao"]');
+            
+            // Botões de alternativa
+            const botoesAlternativa = document.querySelectorAll('.alternativa-btn');
+            
+            // Estado do modal
+            let tipoRecursoSelecionado = null;
+            let alternativaSelecionada = null;
+            
+            // Função para mostrar etapa
+            function mostrarEtapa(etapa) {
+                console.log('📱 Mostrando etapa:', etapa.id);
+                // Esconder todas as etapas
+                if (etapa1) etapa1.classList.add('hidden');
+                if (etapa2) etapa2.classList.add('hidden');
+                
+                // Mostrar etapa selecionada
+                if (etapa) etapa.classList.remove('hidden');
+                
+                // Se for a etapa 2, inicializar o contador de caracteres
+                if (etapa && etapa.id === 'etapa2-preenchimento') {
+                    console.log('🔄 Inicializando contador na etapa 2...');
+                    setTimeout(() => {
+                        initCharCounter();
+                    }, 100);
+                }
+            }
+            
+            // Função para resetar modal
+            function resetarModal() {
+                console.log('🔄 Resetando modal...');
+                // Resetar seleções
+                if (radioAnulacao) radioAnulacao.checked = false;
+                if (radioAlteracao) radioAlteracao.checked = false;
+                tipoRecursoSelecionado = null;
+                alternativaSelecionada = null;
+                
+                // Resetar botões de alternativa
+                botoesAlternativa.forEach(btn => {
+                    btn.classList.remove('bg-sky-600', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-900');
+                });
+                
+                // Esconder campo de alternativa
+                if (campoAlternativa) campoAlternativa.classList.add('hidden');
+                
+                // Desabilitar botão continuar
+                if (btnContinuarEtapa1) {
+                    btnContinuarEtapa1.disabled = true;
+                    btnContinuarEtapa1.classList.add('disabled:bg-gray-300', 'disabled:cursor-not-allowed');
+                }
+                
+                // Voltar para etapa 1
+                mostrarEtapa(etapa1);
+            }
+            
+            // Função para validar etapa 1
+            function validarEtapa1() {
+                const tipoSelecionado = document.querySelector('input[name="tipo-recurso"]:checked');
+                console.log('✅ Validando etapa 1, tipo selecionado:', tipoSelecionado?.value);
+                if (btnContinuarEtapa1) {
+                    btnContinuarEtapa1.disabled = !tipoSelecionado;
+                    if (tipoSelecionado) {
+                        btnContinuarEtapa1.classList.remove('disabled:bg-gray-300', 'disabled:cursor-not-allowed');
+                    } else {
+                        btnContinuarEtapa1.classList.add('disabled:bg-gray-300', 'disabled:cursor-not-allowed');
+                    }
+                }
+            }
+            
+            // Função para configurar etapa 2 baseada no tipo de recurso
+            function configurarEtapa2(tipo) {
+                console.log('⚙️ Configurando etapa 2 para tipo:', tipo);
+                if (tipo === 'alteracao') {
+                    if (campoAlternativa) campoAlternativa.classList.remove('hidden');
+                    if (tituloEtapa2) tituloEtapa2.textContent = 'Alteração de Gabarito';
+                } else {
+                    if (campoAlternativa) campoAlternativa.classList.add('hidden');
+                    if (tituloEtapa2) tituloEtapa2.textContent = 'Anulação de Questão';
+                }
+                
+                // Inicializar contador após configurar a etapa
+                setTimeout(() => {
+                    initCharCounter();
+                }, 100);
+            }
+            
+            // Função para fechar modal
+            function fecharModal() {
+                console.log('❌ Fechando modal');
+                if (modal) {
+                    modal.close();
+                }
+                resetarModal();
+            }
+            
+            // Função para fechar modal de detalhe
+            function fecharModalDetalhe() {
+                console.log('❌ Fechando modal de detalhe');
+                if (modalDetalhe) {
+                    modalDetalhe.close();
+                }
+            }
+            
+            // Event listeners para radio buttons
+            if (radioAnulacao) {
+                radioAnulacao.addEventListener('change', () => {
+                    console.log('📻 Radio anulação clicado');
+                    if (radioAnulacao.checked) {
+                        tipoRecursoSelecionado = 'anulacao';
+                        validarEtapa1();
+                    }
+                });
+            }
+            
+            if (radioAlteracao) {
+                radioAlteracao.addEventListener('change', () => {
+                    console.log('📻 Radio alteração clicado');
+                    if (radioAlteracao.checked) {
+                        tipoRecursoSelecionado = 'alteracao';
+                        validarEtapa1();
+                    }
+                });
+            }
+            
+            // Event listener para botão continuar
+            if (btnContinuarEtapa1) {
+                btnContinuarEtapa1.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('▶️ Botão continuar clicado, tipo selecionado:', tipoRecursoSelecionado);
+                    if (tipoRecursoSelecionado) {
+                        configurarEtapa2(tipoRecursoSelecionado);
+                        mostrarEtapa(etapa2);
+                        console.log('✅ Navegando para etapa 2');
+                    } else {
+                        console.log('❌ Nenhum tipo selecionado');
+                    }
+                });
+            }
+            
+            // Event listener para botão voltar
+            if (btnVoltarEtapa2) {
+                btnVoltarEtapa2.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('⬅️ Voltando para etapa 1');
+                    mostrarEtapa(etapa1);
+                });
+            }
+            
+            // Event listeners para botões de alternativa
+            botoesAlternativa.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    console.log('🔘 Alternativa clicada:', btn.dataset.alternativa);
+                    
+                    // Remover seleção anterior
+                    botoesAlternativa.forEach(b => {
+                        b.classList.remove('bg-sky-600', 'text-white');
+                        b.classList.add('bg-white', 'text-gray-900');
+                    });
+                    
+                    // Selecionar nova alternativa
+                    btn.classList.remove('bg-white', 'text-gray-900');
+                    btn.classList.add('bg-sky-600', 'text-white');
+                    
+                    alternativaSelecionada = btn.dataset.alternativa;
+                });
+            });
+            
+            // Event listener para botão interpor recurso
+            if (btnInterporRecurso) {
+                btnInterporRecurso.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    console.log('💾 Interpondo recurso...');
+                    
+                    // Validar se todos os campos obrigatórios estão preenchidos
+                    const questaoSelecionada = document.querySelector('el-select[name="selected"]');
+                    const argumentacao = document.getElementById('comment');
+                    
+                    let valido = true;
+                    let mensagem = '';
+                    
+                    if (!questaoSelecionada || !questaoSelecionada.value || questaoSelecionada.value === '') {
+                        valido = false;
+                        mensagem = 'Por favor, selecione uma questão.';
+                    } else if (!argumentacao || !argumentacao.value.trim()) {
+                        valido = false;
+                        mensagem = 'Por favor, preencha a argumentação.';
+                    } else if (tipoRecursoSelecionado === 'alteracao' && !alternativaSelecionada) {
+                        valido = false;
+                        mensagem = 'Por favor, selecione uma alternativa correta proposta.';
+                    }
+                    
+                    if (!valido) {
+                        alert(mensagem);
+                        return;
+                    }
+                    
+                    // Aqui você pode adicionar a lógica para enviar o recurso
+                    console.log('✅ Recurso a ser interposto:', {
+                        tipo: tipoRecursoSelecionado,
+                        questao: questaoSelecionada ? questaoSelecionada.value : '',
+                        alternativa: alternativaSelecionada,
+                        argumentacao: argumentacao ? argumentacao.value : ''
+                    });
+                    
+                    // Fechar modal
+                    fecharModal();
+                    
+                    // Mostrar mensagem de sucesso
+                    alert('Recurso interposto com sucesso!');
+                });
+            }
+            
+            // Event listeners para botões de fechar (removido - agora gerenciado pelo sistema unificado)
+            
+            // Observar quando o modal é aberto para resetar
+            if (modal) {
+                const observer = new MutationObserver((mutations) => {
+                    mutations.forEach((mutation) => {
+                        if (mutation.type === 'attributes' && mutation.attributeName === 'open') {
+                            if (modal.hasAttribute('open')) {
+                                console.log('🔓 Modal aberto, resetando...');
+                                setTimeout(() => {
+                                    resetarModal();
+                                }, 100);
+                            }
+                        }
+                    });
+                });
+                
+                observer.observe(modal, { attributes: true, attributeFilter: ['open'] });
+            }
+            
+            console.log('✅ Modal inicializado com sucesso');
         });
 
-        btn2.addEventListener("click", () => {
-            div2.classList.add("hidden");
-            div1.classList.remove("hidden");
+        // Contador de caracteres - Versão ultra simplificada
+        function initCharCounter() {
+            const textarea = document.getElementById('comment');
+            const charCount = document.getElementById('char-count');
+            
+            if (textarea && charCount) {
+                console.log('✅ Configurando contador de caracteres...');
+                
+                function updateCounter() {
+                    const count = textarea.value.length;
+                    charCount.textContent = `${count}/500`;
+                    
+                    // Cores baseadas no limite
+                    if (count > 500) {
+                        charCount.className = 'text-red-500';
+                    } else if (count > 400) {
+                        charCount.className = 'text-yellow-500';
+                    } else {
+                        charCount.className = 'text-gray-500';
+                    }
+                }
+                
+                // Event listeners
+                textarea.addEventListener('input', updateCounter);
+                textarea.addEventListener('paste', () => setTimeout(updateCounter, 10));
+                
+                // Atualizar inicial
+                updateCounter();
+            }
+        }
+
+        // Inicializar contador
+        document.addEventListener('DOMContentLoaded', initCharCounter);
+        
+        // Tentar inicializar periodicamente
+        setInterval(initCharCounter, 2000);
+
+        // Funcionalidade unificada para todos os modais
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lista de todos os modais do sistema
+            const todosOsModais = [
+                'novoRecurso',
+                'detalheRecurso', 
+                'dialog-anulada',
+                'dialog-alterado',
+                'dialog-mantido'
+            ];
+
+            // Função para configurar comportamento padrão de um modal
+            function configurarModal(modalId) {
+                const modal = document.getElementById(modalId);
+                if (!modal) return;
+
+                // Encontrar o backdrop do modal
+                const backdrop = modal.querySelector('.el-dialog-backdrop');
+                
+                // Encontrar botão de fechar (pode ter IDs diferentes)
+                let btnFechar = null;
+                
+                // Tentar diferentes seletores para o botão de fechar
+                if (modalId === 'novoRecurso') {
+                    btnFechar = document.getElementById('btn-fechar-modal');
+                } else if (modalId === 'detalheRecurso') {
+                    btnFechar = document.getElementById('btn-fechar-detalhe');
+                } else {
+                    // Para os modais de detalhe das questões
+                    btnFechar = modal.querySelector(`button[commandfor="${modalId}"]`);
+                }
+
+                // Função para fechar o modal
+                function fecharModal() {
+                    modal.close();
+                }
+
+                // Fechar ao clicar no botão X
+                if (btnFechar) {
+                    btnFechar.addEventListener('click', fecharModal);
+                }
+
+                // Fechar ao clicar no backdrop (fora do modal)
+                if (backdrop) {
+                    backdrop.addEventListener('click', (e) => {
+                        // Verificar se o clique foi diretamente no backdrop, não em um filho
+                        if (e.target === backdrop) {
+                            fecharModal();
+                        }
+                    });
+                }
+
+                // Para modais que são dialog direto (questões do gabarito), também adicionar listener no próprio dialog
+                if (modalId.startsWith('dialog-')) {
+                    modal.addEventListener('click', (e) => {
+                        // Se o clique foi diretamente no dialog (não em elementos filhos), fechar
+                        if (e.target === modal) {
+                            fecharModal();
+                        }
+                    });
+                }
+
+                // Fechar ao pressionar ESC
+                modal.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        fecharModal();
+                    }
+                });
+            }
+
+            // Configurar todos os modais
+            todosOsModais.forEach(configurarModal);
         });
     </script>
 
