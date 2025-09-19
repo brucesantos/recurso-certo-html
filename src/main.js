@@ -85,4 +85,45 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100);
 });
 
-// Modal functionality moved to recursos.html for better integration
+// Função para desabilitar questões específicas no select
+function disableQuestionOptions() {
+    const selectElement = document.getElementById('select');
+    if (!selectElement) return;
+
+    // Lista de valores das questões que devem ser desabilitadas
+    const disabledQuestionValues = ['8', '9']; // Questões 3 e 4
+
+    // Adicionar event listener para prevenir seleção de opções desabilitadas
+    selectElement.addEventListener('change', function(event) {
+        const selectedValue = event.target.value;
+        
+        if (disabledQuestionValues.includes(selectedValue)) {
+            // Prevenir a seleção e resetar para valor anterior
+            event.preventDefault();
+            event.target.value = '';
+            
+            // Mostrar mensagem de aviso
+            alert('Esta questão já possui um recurso interposto e não pode ser selecionada novamente.');
+        }
+    });
+
+    // Adicionar event listener para cliques nas opções desabilitadas
+    const disabledOptions = selectElement.querySelectorAll('el-option[disabled]');
+    disabledOptions.forEach(option => {
+        option.addEventListener('click', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            
+            // Mostrar mensagem de aviso
+            alert('Esta questão já possui um recurso interposto e não pode ser selecionada novamente.');
+        });
+    });
+}
+
+// Inicializar quando o DOM estiver carregado
+document.addEventListener('DOMContentLoaded', () => {
+    // Aguardar um pouco para o Elements carregar
+    setTimeout(() => {
+        disableQuestionOptions();
+    }, 200);
+});
