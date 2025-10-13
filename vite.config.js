@@ -13,7 +13,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'src/index.html',
-        resources: 'src/recursos.html'
+        selecao: 'src/selecao-recurso.html',
+        dissertativa: 'src/recursos-dissertativa.html',
+        gabarito: 'src/recursos-gabarito.html',
+        cpnu: 'src/_recursos-cpnu.html'
       }
     }
   },
