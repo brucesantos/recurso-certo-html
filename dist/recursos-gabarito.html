@@ -293,6 +293,60 @@
                                                             </div>
 
                                                             <div>
+                                                                <label for="area-select" class="block text-sm/6 font-medium text-gray-900">Área de Conhecimento</label>
+                                                                <el-select id="area-select" name="area" class="mt-2 block">
+                                                                    <button type="button" class="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-sky-600 sm:text-sm/6">
+                                                                        <el-selectedcontent class="col-start-1 row-start-1 truncate pr-6">Selecione a área</el-selectedcontent>
+                                                                        <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4">
+                                                                        <path d="M5.22 10.22a.75.75 0 0 1 1.06 0L8 11.94l1.72-1.72a.75.75 0 1 1 1.06 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 0 1 0-1.06ZM10.78 5.78a.75.75 0 0 1-1.06 0L8 4.06 6.28 5.78a.75.75 0 0 1-1.06-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                        </svg>
+                                                                    </button>
+
+                                                                    <el-options anchor="bottom start" popover class="max-h-60 w-(--button-width) overflow-auto rounded-md bg-white py-1 text-base shadow-lg outline-1 outline-black/5 [--anchor-gap:--spacing(1)] data-leave:transition data-leave:transition-discrete data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm">
+                                                                        <el-option value="matematica" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
+                                                                            <span class="block truncate font-normal group-aria-selected/option:font-semibold">Matemática</span>
+                                                                            <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                                    <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                                </svg>
+                                                                            </span>
+                                                                        </el-option>
+                                                                        <el-option value="portugues" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
+                                                                            <span class="block truncate font-normal group-aria-selected/option:font-semibold">Português</span>
+                                                                            <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                                    <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                                </svg>
+                                                                            </span>
+                                                                        </el-option>
+                                                                        <el-option value="historia" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
+                                                                            <span class="block truncate font-normal group-aria-selected/option:font-semibold">História</span>
+                                                                            <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                                    <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                                </svg>
+                                                                            </span>
+                                                                        </el-option>
+                                                                        <el-option value="quimica" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
+                                                                            <span class="block truncate font-normal group-aria-selected/option:font-semibold">Química</span>
+                                                                            <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                                    <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                                </svg>
+                                                                            </span>
+                                                                        </el-option>
+                                                                    </el-options>
+                                                                </el-select>
+                                                            </div>
+
+                                                            <div>
+                                                                <label for="tipo-prova" class="block text-sm/6 font-medium text-gray-900">Tipo de Prova</label>
+                                                                <div class="mt-2">
+                                                                    <input id="tipo-prova" type="text" name="tipoProva" value="" disabled placeholder="Será definido após a seleção da área" class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500 disabled:outline-gray-200 sm:text-sm/6" />
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
                                                                 <label for="select" class="block text-sm/6 font-medium text-gray-900">Questão</label>
                                                                 <el-select id="select" name="selected" value="4" class="mt-2 block">
                                                                     <button type="button" class="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-sky-600 sm:text-sm/6">
@@ -365,7 +419,7 @@
                                                             <div>
                                                                 <label for="comment" class="block text-sm/6 font-medium text-gray-900">Argumentação</label>
                                                                 <div class="mt-2">
-                                                                    <textarea id="comment" name="comment" rows="4" maxlength="2000" placeholder="Digite sua argumentação lógica e consistente aqui. Exemplo: A questão apresenta ambiguidade na interpretação dos conceitos apresentados, uma vez que as alternativas B e C podem ser consideradas corretas segundo os guidelines mais recentes da literatura médica..." class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600 sm:text-sm/6"></textarea>
+                                                                    <textarea id="comment" name="comment" rows="4" maxlength="2000" placeholder="Digite sua argumentação lógica e consistente aqui..." class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600 sm:text-sm/6"></textarea>
                                                                 </div>
                                                                 <!-- Contador de caracteres -->
                                                                 <div id="char-counter-container" class="mt-1 flex justify-between text-xs text-gray-500">
@@ -423,7 +477,7 @@
 
                                                     <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
                                                         <p>Informações do Recurso</p>
-                                                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                                                             <div class="flex-1">
                                                                 <label for="" class="block text-sm/6 font-medium text-gray-500">Protocolo</label>
                                                                 <p class="text-sm">PND-2025-001</p>
@@ -436,25 +490,29 @@
                                                                 <label for="" class="block text-sm/6 font-medium text-gray-500">Área</label>
                                                                 <p class="text-sm">Matemática</p>
                                                             </div>
+                                                            <div class="flex-1">
+                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Tipo de caderno de prova</label>
+                                                                <p class="text-sm">Tipo 1</p>
+                                                            </div>
                                                         </div>
                                                     </div>
 
                                                     <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
-                                                        <p>Respostas da Questão</p>
+                                                        <p>Gabarito da Questão</p>
                                                         <div class="flex gap-6">
                                                             <div class="flex-1">
-                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Resposta Preliminar</label>
+                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Gabarito Preliminar</label>
                                                                 <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">A</span>
                                                             </div>
                                                             <div class="flex-1">
-                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Resposta Definitiva</label>
+                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Gabarito Definitivo</label>
                                                                 <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">C</span>
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                     <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
-                                                        <p>Resposta Proposta</p>
+                                                        <p>Gabarito Proposto</p>
                                                         <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">C</span>
                                                         <div>
                                                             <label for="" class="block text-sm/6 font-medium text-gray-500">Argumentação</label>
@@ -519,7 +577,7 @@
 
                                                     <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
                                                         <p>Informações do Recurso</p>
-                                                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                                                             <div class="flex-1">
                                                                 <label for="" class="block text-sm/6 font-medium text-gray-500">Protocolo</label>
                                                                 <p class="text-sm">PND-2025-001</p>
@@ -532,25 +590,29 @@
                                                                 <label for="" class="block text-sm/6 font-medium text-gray-500">Área</label>
                                                                 <p class="text-sm">Matemática</p>
                                                             </div>
+                                                            <div class="flex-1">
+                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Tipo de caderno de prova</label>
+                                                                <p class="text-sm">Tipo 1</p>
+                                                            </div>
                                                         </div>
                                                     </div>
 
                                                     <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
-                                                        <p>Respostas da Questão</p>
+                                                        <p>Gabarito da Questão</p>
                                                         <div class="flex gap-6">
                                                             <div class="flex-1">
-                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Resposta Preliminar</label>
+                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Gabarito Preliminar</label>
                                                                 <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">A</span>
                                                             </div>
                                                             <div class="flex-1">
-                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Resposta Definitiva</label>
+                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Gabarito Definitivo</label>
                                                                 <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">C</span>
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                     <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
-                                                        <p>Resposta Proposta</p>
+                                                        <p>Gabarito Proposto</p>
                                                         <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">C</span>
                                                         <div>
                                                             <label for="" class="block text-sm/6 font-medium text-gray-500">Argumentação</label>
@@ -610,7 +672,7 @@
 
                                                     <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
                                                         <p>Informações do Recurso</p>
-                                                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                                                             <div class="flex-1">
                                                                 <label for="" class="block text-sm/6 font-medium text-gray-500">Protocolo</label>
                                                                 <p class="text-sm">PND-2025-001</p>
@@ -623,18 +685,22 @@
                                                                 <label for="" class="block text-sm/6 font-medium text-gray-500">Área</label>
                                                                 <p class="text-sm">Matemática</p>
                                                             </div>
+                                                            <div class="flex-1">
+                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Tipo de caderno de prova</label>
+                                                                <p class="text-sm">Tipo 1</p>
+                                                            </div>
                                                         </div>
                                                     </div>
 
                                                     <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
-                                                        <p>Respostas da Questão</p>
+                                                        <p>Gabarito da Questão</p>
                                                         <div class="flex gap-6">
                                                             <div class="flex-1">
-                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Resposta Preliminar</label>
+                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Gabarito Preliminar</label>
                                                                 <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">A</span>
                                                             </div>
                                                             <div class="flex-1">
-                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Resposta Definitiva</label>
+                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Gabarito Definitivo</label>
                                                                 <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">C</span>
                                                             </div>
                                                         </div>
@@ -704,11 +770,11 @@
                                         <!-- Answers -->
                                         <div class="space-y-4">
                                             <div class="flex items-center gap-3">
-                                                <span class="text-sm text-gray-600">Resposta Preliminar:</span>
+                                                <span class="text-sm text-gray-600">Gabarito Preliminar:</span>
                                                 <span class="inline-flex items-center justify-center px-2 py-1 text-xs rounded-md bg-gray-100 font-medium text-gray-900">C</span>
                                             </div>
                                             <div class="flex items-center gap-3">
-                                                <span class="text-sm text-gray-600">Resposta Definitiva:</span>
+                                                <span class="text-sm text-gray-600">Gabarito Definitivo:</span>
                                                 <span class="inline-flex items-center justify-center px-2 py-1 text-xs rounded-md bg-red-100 font-medium text-red-900">X</span>
                                             </div>
                                         </div>
@@ -755,11 +821,11 @@
                                         <!-- Answers -->
                                         <div class="space-y-4">
                                             <div class="flex items-center gap-3">
-                                                <span class="text-sm text-gray-600">Resposta Preliminar:</span>
+                                                <span class="text-sm text-gray-600">Gabarito Preliminar:</span>
                                                 <span class="inline-flex items-center justify-center px-2 py-1 text-xs rounded-md bg-gray-100 font-medium text-gray-900">A</span>
                                             </div>
                                             <div class="flex items-center gap-3">
-                                                <span class="text-sm text-gray-600">Resposta Definitiva:</span>
+                                                <span class="text-sm text-gray-600">Gabarito Definitivo:</span>
                                                 <span class="inline-flex items-center justify-center px-2 py-1 text-xs rounded-md bg-gray-100 font-medium text-gray-900">A</span>
                                             </div>
                                         </div>
@@ -800,11 +866,11 @@
                                         <!-- Answers -->
                                         <div class="space-y-4">
                                             <div class="flex items-center gap-3">
-                                                <span class="text-sm text-gray-600">Resposta Preliminar:</span>
+                                                <span class="text-sm text-gray-600">Gabarito Preliminar:</span>
                                                 <span class="inline-flex items-center justify-center px-2 py-1 rounded-md bg-gray-100 text-xs font-medium text-gray-900">B</span>
                                             </div>
                                             <div class="flex items-center gap-3">
-                                                <span class="text-sm text-gray-600">Resposta Definitiva:</span>
+                                                <span class="text-sm text-gray-600">Gabarito Definitivo:</span>
                                                 <span class="inline-flex items-center justify-center px-2 py-1 rounded-md bg-gray-100 text-xs font-medium text-gray-900">B</span>
                                             </div>
                                         </div>
@@ -873,7 +939,7 @@
                                 </div>
 
                                 <div class="flex flex-col gap-1 w-full sm:w-[200px]">
-                                    <label for="select" class="text-sm font-medium">Filtros</label>
+                                    <label for="select" class="text-sm font-medium">Filtrar área</label>
                                     <el-select id="select" name="selected" value="4" class="block w-full">
                                             <button type="button" class="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-sky-600 sm:text-sm/6">
                                                 <el-selectedcontent class="col-start-1 row-start-1 truncate pr-6">Todas as áreas</el-selectedcontent>
@@ -987,7 +1053,7 @@
                                             <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 4</span>
                                             <span class="hidden sm:inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">História</span>
                                         </div>
-                                        <span class="inline-flex items-center rounded-md bg-red-100 px-2 py-1 text-xs font-medium text-red-700 inset-ring inset-ring-red-500/10">Gabarito Anulada</span>
+                                        <span class="inline-flex items-center rounded-md bg-red-100 px-2 py-1 text-xs font-medium text-red-700 inset-ring inset-ring-red-500/10">Questão anulada</span>
                                     </div>
                                     <div class="flex justify-between items-center">
                                         <div class="flex gap-2">
@@ -1079,6 +1145,8 @@
             // Radio buttons do tipo de recurso
             const radioAnulacao = document.querySelector('input[name="tipo-recurso"][value="anulacao"]');
             const radioAlteracao = document.querySelector('input[name="tipo-recurso"][value="alteracao"]');
+            const areaSelect = document.getElementById('area-select');
+            const tipoProvaInput = document.getElementById('tipo-prova');
             
             // Botões de alternativa
             const botoesAlternativa = document.querySelectorAll('.alternativa-btn');
@@ -1086,6 +1154,7 @@
             // Estado do modal
             let tipoRecursoSelecionado = null;
             let alternativaSelecionada = null;
+            let tipoProvaDetectado = '';
             
             // Função para mostrar etapa
             function mostrarEtapa(etapa) {
@@ -1123,6 +1192,7 @@
                 
                 // Esconder campo de alternativa
                 if (campoAlternativa) campoAlternativa.classList.add('hidden');
+                if (tipoProvaInput) tipoProvaInput.value = '';
                 
                 // Desabilitar botão continuar
                 if (btnContinuarEtapa1) {
@@ -1132,6 +1202,20 @@
                 
                 // Voltar para etapa 1
                 mostrarEtapa(etapa1);
+            }
+            // Definir tipo de prova após seleção da área (informativo)
+            if (areaSelect && tipoProvaInput) {
+                areaSelect.addEventListener('change', () => {
+                    const areaValor = areaSelect.value;
+                    const areaToProva = {
+                        matematica: 'Prova A',
+                        portugues: 'Prova B',
+                        historia: 'Prova C',
+                        quimica: 'Prova D',
+                    };
+                    tipoProvaDetectado = areaToProva[areaValor] || '';
+                    tipoProvaInput.value = tipoProvaDetectado || '';
+                });
             }
             
             // Função para validar etapa 1
@@ -1260,13 +1344,17 @@
                     console.log('💾 Interpondo recurso...');
                     
                     // Validar se todos os campos obrigatórios estão preenchidos
+                    const areaSelecionada = document.querySelector('el-select[name="area"]');
                     const questaoSelecionada = document.querySelector('el-select[name="selected"]');
                     const argumentacao = document.getElementById('comment');
                     
                     let valido = true;
                     let mensagem = '';
                     
-                    if (!questaoSelecionada || !questaoSelecionada.value || questaoSelecionada.value === '') {
+                    if (!areaSelecionada || !areaSelecionada.value || areaSelecionada.value === '') {
+                        valido = false;
+                        mensagem = 'Por favor, selecione a área de conhecimento.';
+                    } else if (!questaoSelecionada || !questaoSelecionada.value || questaoSelecionada.value === '') {
                         valido = false;
                         mensagem = 'Por favor, selecione uma questão.';
                     } else if (!argumentacao || !argumentacao.value.trim()) {
@@ -1285,6 +1373,8 @@
                     // Aqui você pode adicionar a lógica para enviar o recurso
                     console.log('✅ Recurso a ser interposto:', {
                         tipo: tipoRecursoSelecionado,
+                        area: areaSelecionada ? areaSelecionada.value : '',
+                        tipoProva: tipoProvaDetectado,
                         questao: questaoSelecionada ? questaoSelecionada.value : '',
                         alternativa: alternativaSelecionada,
                         argumentacao: argumentacao ? argumentacao.value : ''
