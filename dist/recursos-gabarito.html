@@ -120,7 +120,7 @@
                         <div class="border border-gray-200 overflow-hidden rounded-lg bg-white shadow-sm p-6 space-y-6 pb-0"> 
                             <div class="flex items-center justify-between">
                                 <div>
-                                    <p class="text-lg font-bold text-gray-900 sm:text-2xl">Recursos contra o Gabarito</p>
+                                    <p class="text-lg font-bold text-gray-900 sm:text-2xl">Recursos contra o Gabarito das questões objetivas</p>
                                 </div>
                                 <button command="show-modal" commandfor="novoRecurso" type="button" class="rounded-md bg-sky-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-sky-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">
                                     Novo recurso
@@ -255,7 +255,7 @@
                                                                 <input type="radio" name="tipo-recurso" value="anulacao" class="relative mt-0.5 size-4 shrink-0 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-sky-600 checked:bg-sky-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden" />
                                                                 <span class="ml-3 flex flex-col">
                                                                     <span class="block text-md font-medium text-gray-900 group-has-checked:text-sky-900">Anulação de Questão</span>
-                                                                    <span class="block text-sm text-gray-500 group-has-checked:text-sky-700">Quando o participante entende que a questão é inválida ou apresenta erro, pedindo que ela seja desconsiderada.</span>
+                                                                    <span class="block text-sm text-gray-500 group-has-checked:text-sky-700">Quando o participante entende que a questão é inválida ou apresenta erro, pedindo que ela seja anulada.</span>
                                                                 </span>
                                                             </label>
                                                             <label class="group flex border border-gray-200 p-4 first:rounded-tl-md first:rounded-tr-md last:rounded-br-md last:rounded-bl-md focus:outline-hidden has-checked:relative has-checked:border-sky-200 has-checked:bg-sky-50 cursor-pointer">
@@ -403,15 +403,14 @@
 
                                                             <!-- Campo de Alternativa Correta - só aparece para "Alteração de Gabarito" -->
                                                             <div id="campo-alternativa" class="hidden">
-                                                                <label class="block text-sm/6 font-medium text-gray-900">Alternativa Correta Proposta <span class="text-red-500">*</span></label>
+                                                                <label class="block text-sm/6 font-medium text-gray-900">Alternativa Correta Proposta</label>
                                                                 <p class="text-sm text-gray-500 mt-1">Selecione qual alternativa você considera como a resposta correta:</p>
                                                                 <div class="mt-3">
                                                                     <div class="isolate inline-flex rounded-md shadow-xs">
                                                                         <button type="button" class="alternativa-btn cursor-pointer relative inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-sky-600 hover:text-white focus:z-10" data-alternativa="A">A</button>
                                                                         <button type="button" class="alternativa-btn cursor-pointer relative -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300  hover:bg-sky-600 hover:text-white focus:z-10" data-alternativa="B">B</button>
                                                                         <button type="button" class="alternativa-btn cursor-pointer relative -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300  hover:bg-sky-600 hover:text-white focus:z-10" data-alternativa="C">C</button>
-                                                                        <button type="button" class="alternativa-btn cursor-pointer relative -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300  hover:bg-sky-600 hover:text-white focus:z-10" data-alternativa="D">D</button>
-                                                                        <button type="button" class="alternativa-btn cursor-pointer relative -ml-px inline-flex items-center rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300  hover:bg-sky-600 hover:text-white focus:z-10" data-alternativa="E">E</button>
+                                                                        <button type="button" class="alternativa-btn cursor-pointer relative -ml-px inline-flex items-center rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300  hover:bg-sky-600 hover:text-white focus:z-10" data-alternativa="D">D</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -779,11 +778,7 @@
                                             </div>
                                         </div>
 
-                                        <!-- Cancellation message -->
-                                        <div class="flex items-start gap-3 p-4 bg-red-50 rounded-lg">
-                                            <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                                            <p class="text-xs text-red-700">Esta questão foi anulada e não será considerada na pontuação final</p>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </el-dialog-panel>
