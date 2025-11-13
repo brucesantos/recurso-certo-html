@@ -16,6 +16,7 @@ export default defineConfig({
         selecao: 'src/selecao-recurso.html',
         dissertativa: 'src/recursos-dissertativa.html',
         gabarito: 'src/recursos-gabarito.html',
+        resultadoDiscursiva: 'src/recursos-resultado-discursiva.html',
         cpnu: 'src/_recursos-cpnu.html'
       }
     }

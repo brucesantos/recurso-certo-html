@@ -1,0 +1,1184 @@
+<!doctype html>
+<html class="h-full bg-gray-50" style="color-scheme: light;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+  <style>
+    el-options[popover] {
+        &::after {
+            content: '';
+            display: block;
+            height: 200px;
+        }
+    }
+  </style>
+  <script type="module" crossorigin src="./assets/output-qZCCx4oo.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/output-DAZih9O_.css">
+</head>
+<body class="h-full">
+    <div class="min-h-screen bg-gray-100">
+        <nav class="border-b border-gray-200 bg-white">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="flex h-16 justify-between">
+                    <div class="flex items-center">
+                        <div class="flex shrink-0 items-center">
+                            <img src="data:image/svg+xml,%3csvg%20width='92'%20height='36'%20viewBox='0%200%2092%2036'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20class='w-[90%25]%20h-auto'%3e%3cg%20clip-path='url(%23clip0_37_22)'%3e%3cpath%20d='M0%208.38675e-07L32.0076%2036H60.0127L28.0071%208.38675e-07H0Z'%20fill='%23233769'%3e%3c/path%3e%3cpath%20d='M68.0843%2021.4349L92.0139%200.000806941H64.0109L51.2468%2011.4285L68.0843%2021.4349Z'%20fill='%232A84C2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_37_22'%3e%3crect%20width='92'%20height='36'%20fill='white'%3e%3c/rect%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="Your Company" class="h-4 w-auto sm:h-8" />
+                        </div>
+                        <div class="flex flex-col ml-2 min-w-0 sm:-my-px sm:ml-6 sm:space-x-8 sm:min-w-full sm:mr-0 sm:flex-none">
+                            <h1 class="font-bold text-sm truncate whitespace-nowrap max-w-[60vw] sm:max-w-none sm:text-lg">Sistema de Interposição de Recursos</h1>
+                            <span class="text-sm text-gray-400">FGV Conhecimento</span>
+                        </div>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:items-center sm:gap-6">
+                        <!-- Navigation links for desktop -->
+                        <a href="recursos-gabarito.html" class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors">Gabarito</a>
+                        <a href="recursos-dissertativa.html" class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors">Padrão de Resposta</a>
+                        <a href="recursos-resultado-discursiva.html" class="text-sm font-medium text-sky-600 font-semibold">Resultado Discursiva</a>
+                        <a href="index.html" class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors" title="Sair">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                                <polyline points="16,17 21,12 16,7"/>
+                                <line x1="21" x2="9" y1="12" y2="12"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="-mr-2 flex items-center sm:hidden">
+                    <!-- Mobile menu button -->
+                        <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-2 focus:outline-offset-2 focus:outline-sky-600">
+                            <span class="absolute -inset-0.5"></span>
+                            <span class="sr-only">Abrir o menu principal</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+                                <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+                                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
+                <div class="border-t border-gray-200 py-2">
+                    <a href="recursos-gabarito.html" class="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-800">Gabarito</a>
+                    <a href="recursos-dissertativa.html" class="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-800">Padrão de Resposta</a>
+                    <a href="recursos-resultado-discursiva.html" class="block px-4 py-2 text-base font-medium text-sky-600 font-semibold">Resultado Discursiva</a>
+                    <a href="index.html" class="flex items-center gap-2 px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                            <polyline points="16,17 21,12 16,7"/>
+                            <line x1="21" x2="9" y1="12" y2="12"/>
+                        </svg>
+                        Sair
+                    </a>
+                </div>
+            </el-disclosure>
+        </nav>
+
+        <main class="p-6 space-y-6 mx-auto max-w-7xl">
+
+
+            <!-- Conteúdo principal -->
+            <div id="main-content">
+
+                <div  class="flex flex-col gap-6">
+
+                    <div class="rounded-md bg-blue-50 p-4 border border-blue-300">
+                        <div class="flex">
+                            <div class="shrink-0">
+                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 text-blue-400">
+                                    <path d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div class="ml-3 flex-1 md:flex md:justify-between">
+                                <p class="text-sm text-blue-700"><strong>Prazo para recursos:</strong> Os recursos podem ser criados até o dia 21 de Novembro, 2025 às 23:59.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botão Ver Resultado da Questão Discursiva (PDF) -->
+                    <div class="flex justify-end">
+                        <a href="https://s2.q4cdn.com/175719177/files/doc_presentations/Placeholder-PDF.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md bg-white px-4 py-2 text-sm font-semibold text-gray-700 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text">
+                                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+                                <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                                <path d="M10 9H8"/>
+                                <path d="M16 13H8"/>
+                                <path d="M16 17H8"/>
+                            </svg>
+                            Resultado preliminar da questão discursiva
+                        </a>
+                    </div>
+
+                    <!-- CONTEUDO -->
+                    <div id="recurso" class="tab-content active">
+                        <div class="border border-gray-200 overflow-hidden rounded-lg bg-white shadow-sm p-6 space-y-6 pb-0"> 
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-lg font-bold text-gray-900 sm:text-2xl">Recursos contra o Resultado da questão discursiva</p>
+                                </div>
+                                <button command="show-modal" commandfor="novoRecurso" type="button" class="rounded-md bg-sky-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-sky-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">
+                                    Novo recurso
+                                </button>
+                            </div>
+
+                            <div class="border border-gray-200 rounded-lg p-4 space-y-6">
+                                <div class="flex justify-between">
+                                    <div class="flex gap-2">
+                                        <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Competência 1</span>
+                                        <span class="hidden sm:inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Resultado da questão discursiva</span>
+                                    </div>
+                                    <span class="inline-flex items-center rounded-md bg-green-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Deferido</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <div>
+                                        <p class="text-sm text-gray-700 line-clamp-[1] hyphens-auto">Solicito a revisão da pontuação atribuída à Competência 1, referente ao domínio da modalidade escrita formal da língua portuguesa. A resposta apresentada demonstra pleno domínio das regras de ortografia, acentuação, pontuação e concordância verbal e nominal, conforme estabelecido no padrão de resposta. A análise criteriosa do texto evidencia a utilização adequada da norma culta em toda a extensão da resposta, com construções sintáticas corretas e vocabulário técnico apropriado ao contexto solicitado. Os critérios estabelecidos para a pontuação máxima nesta competência foram integralmente atendidos, não havendo desvios gramaticais que justifiquem a pontuação atribuída.</p>
+                                        <span class="text-xs text-gray-400">18/03/2024 às 07:30</span>
+                                    </div>
+                                    <button command="show-modal" commandfor="detalheRespondido" type="button" class="rounded-lg bg-white p-3 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:bg-sky-600 hover:text-white hover:inset-ring-sky-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye h-4 w-4"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 space-y-6">
+                                <div class="flex justify-between">
+                                    <div class="flex gap-2">
+                                        <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Competência 2</span>
+                                        <span class="hidden sm:inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Resultado da questão discursiva</span>
+                                    </div>
+                                    <span class="inline-flex items-center rounded-md bg-red-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-red-500/10">Indeferido</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <div>
+                                        <p class="text-sm text-gray-700 line-clamp-[1] hyphens-auto">Solicito a revisão da pontuação atribuída à Competência 2, que avalia a compreensão da proposta e o desenvolvimento do tema. A resposta construída demonstra compreensão integral da proposta apresentada, desenvolvendo todos os aspectos solicitados no comando da questão de forma aprofundada e coerente. Foram apresentados todos os elementos obrigatórios estabelecidos no padrão de resposta, com fundamentação teórica adequada e exemplificações pertinentes ao tema. O critério de completude foi integralmente atendido, não havendo justificativa para a pontuação inferior atribuída quando comparada aos critérios objetivos estabelecidos pela banca examinadora no padrão oficial de correção.</p>
+                                        <span class="text-xs text-gray-400">18/03/2024 às 07:30</span>
+                                    </div>
+                                    <button command="show-modal" commandfor="detalheExcluido" type="button" class="rounded-lg bg-white p-3 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:bg-sky-600 hover:text-white hover:inset-ring-sky-600"> 
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye h-4 w-4 ml-auto"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 space-y-6">
+                                <div class="flex justify-between">
+                                    <div class="flex gap-2">
+                                        <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Competência 5</span>
+                                        <span class="hidden sm:inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Resultado da questão discursiva</span>
+                                    </div>
+                                    <span class="inline-flex items-center rounded-md bg-orange-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-orange-500/10">Parcialmente deferido</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <div>
+                                        <p class="text-sm text-gray-700 line-clamp-[1] hyphens-auto">Solicito a revisão da pontuação atribuída à Competência 5, referente à capacidade de elaborar proposta de intervenção ou solução para o problema apresentado. A resposta construída apresenta proposta de solução clara, viável e detalhada, contemplando todos os elementos exigidos no padrão de resposta: identificação do problema, agentes responsáveis, ações concretas e resultados esperados. A proposta demonstra conhecimento técnico adequado e está fundamentada em bases teóricas sólidas, atendendo integralmente aos critérios estabelecidos pela banca. A pontuação atribuída não reflete a qualidade e completude da resposta apresentada, sendo necessária a reavaliação considerando os parâmetros objetivos definidos no edital.</p>
+                                        <span class="text-xs text-gray-400">18/03/2024 às 07:30</span>
+                                    </div>
+                                    <button command="show-modal" commandfor="detalheAnalise" type="button" class="rounded-lg bg-white p-3 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:bg-sky-600 hover:text-white hover:inset-ring-sky-600"> 
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye h-4 w-4"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- DELETAR RECURSO -->
+                            <el-dialog>
+                                <dialog id="deletarRecurso" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+                                    <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
+
+                                    <div tabindex="0" class="flex items-end justify-center focus:outline-none p-4 sm:p-0">
+                                        <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 w-full max-w-[500px] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+                                            
+                                            <div class="flex flex-col">
+
+                                                <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
+                                                    <h3 id="dialog-title" class="text-base font-semibold text-gray-900">Confirmar Exclusão</h3>
+                                                    <button type="button" command="close" commandfor="deletarRecurso" aria-label="Fechar" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+
+                                                <div class="p-4 text-sm">
+                                                    Tem certeza que deseja excluir este recurso? O recurso será marcado como excluído mas permanecerá visível na lista.
+                                                </div>
+
+                                                <div class="flex p-4 border-t border-gray-100 gap-2 w-full">
+                                                    <button type="button" command="close" commandfor="deletarRecurso" class="ml-auto rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-600 shadow-xs ring-1 ring-inset ring-gray-500 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500">Cancelar</button>
+                                                    <button type="button" command="close" commandfor="deletarRecurso" class="flex items-center gap-2 rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-400 focus:outline-none focus:ring-2 focus:ring-red-500">Excluir</button>
+                                                </div>
+
+                                            </div>
+
+                                        </el-dialog-panel>
+                                    </div>
+                                </dialog>
+                            </el-dialog>
+
+                            <!-- NOVO RECURSO -->
+                            <el-dialog>
+                                <dialog id="novoRecurso" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+                                    <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
+
+                                    <div tabindex="0" class="flex items-end justify-center focus:outline-none p-4 sm:p-0">
+                                        <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 w-full max-w-[500px] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+                                            
+                                            <div class="flex flex-col">
+
+                                                <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
+                                                    <h3 id="dialog-title" class="text-base font-semibold text-gray-900">Interpor Novo Recurso</h3>
+                                                    <button type="button" command="close" commandfor="novoRecurso" aria-label="Fechar" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                
+                                                <!-- Preenchimento das Informações -->
+                                                <div id="etapa2-preenchimento" class="etapa-modal">
+                                                    <div class="p-4 space-y-4">
+
+                                                        <div>
+                                                            <p id="etapa2-titulo" class="text-lg font-medium text-gray-900">Preenchimento das Informações</p>
+                                                            <p class="text-sm text-gray-500">Preencha os dados necessários para interpor o recurso</p>
+                                                        </div>
+                                                        
+                                                        <div class="space-y-4">
+
+                                                            <div>
+                                                                <label for="registerNumber" class="block text-sm/6 font-medium text-gray-900">CPF</label>
+                                                                <div class="mt-2">
+                                                                    <input id="registerNumber" type="registerNumber" name="registerNumber" value="123.456.789-10" disabled placeholder="Número de Inscrição" class="block w-full rounded-md bg-gray-100 px-3 py-1.5 text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500 disabled:outline-gray-200 sm:text-sm/6" />
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <label for="competencia-select" class="block text-sm/6 font-medium text-gray-900">Competência</label>
+                                                                <el-select id="competencia-select" name="competencia" class="mt-2 block">
+                                                                    <button type="button" class="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-sky-600 sm:text-sm/6">
+                                                                        <el-selectedcontent class="col-start-1 row-start-1 truncate pr-6">Selecione a competência</el-selectedcontent>
+                                                                        <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4">
+                                                                        <path d="M5.22 10.22a.75.75 0 0 1 1.06 0L8 11.94l1.72-1.72a.75.75 0 1 1 1.06 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 0 1 0-1.06ZM10.78 5.78a.75.75 0 0 1-1.06 0L8 4.06 6.28 5.78a.75.75 0 0 1-1.06-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                        </svg>
+                                                                    </button>
+
+                                                                    <el-options anchor="bottom start" popover class="max-h-60 w-(--button-width) overflow-auto rounded-md bg-white py-1 text-base shadow-lg outline-1 outline-black/5 [--anchor-gap:--spacing(1)] data-leave:transition data-leave:transition-discrete data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm">
+                                                                        <el-option value="1" disabled class="group/option relative block cursor-not-allowed py-2 pr-9 pl-3 text-gray-400 select-none opacity-50 focus:bg-gray-100 focus:text-gray-400 focus:outline-hidden">
+                                                                            <span class="block truncate font-normal group-aria-selected/option:font-semibold">Competência 1 (Já possui recurso)</span>
+                                                                            <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                                    <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                                </svg>
+                                                                            </span>
+                                                                        </el-option>
+                                                                        <el-option value="2" disabled class="group/option relative block cursor-not-allowed py-2 pr-9 pl-3 text-gray-400 select-none opacity-50 focus:bg-gray-100 focus:text-gray-400 focus:outline-hidden">
+                                                                            <span class="block truncate font-normal group-aria-selected/option:font-semibold">Competência 2 (Já possui recurso)</span>
+                                                                            <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                                    <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                                </svg>
+                                                                            </span>
+                                                                        </el-option>
+                                                                        <el-option value="3" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
+                                                                            <span class="block truncate font-normal group-aria-selected/option:font-semibold">Competência 3</span>
+                                                                            <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                                    <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                                </svg>
+                                                                            </span>
+                                                                        </el-option>
+                                                                        <el-option value="4" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-gray-900 select-none focus:bg-sky-600 focus:text-white focus:outline-hidden">
+                                                                            <span class="block truncate font-normal group-aria-selected/option:font-semibold">Competência 4</span>
+                                                                            <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                                    <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                                </svg>
+                                                                            </span>
+                                                                        </el-option>
+                                                                        <el-option value="5" disabled class="group/option relative block cursor-not-allowed py-2 pr-9 pl-3 text-gray-400 select-none opacity-50 focus:bg-gray-100 focus:text-gray-400 focus:outline-hidden">
+                                                                            <span class="block truncate font-normal group-aria-selected/option:font-semibold">Competência 5 (Já possui recurso)</span>
+                                                                            <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-sky-600 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
+                                                                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
+                                                                                    <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                                                                </svg>
+                                                                            </span>
+                                                                        </el-option>
+                                                                    </el-options>
+                                                                </el-select>
+                                                            </div>
+
+                                                            <div>
+                                                                <label for="comment" class="block text-sm/6 font-medium text-gray-900">Argumentação</label>
+                                                                <div class="mt-2">
+                                                                    <textarea id="comment" name="comment" rows="4" maxlength="2000" placeholder="Digite sua argumentação lógica e consistente aqui..." class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600 sm:text-sm/6"></textarea>
+                                                                </div>
+                                                                <!-- Contador de caracteres -->
+                                                                <div id="char-counter-container" class="mt-1 flex justify-between text-xs text-gray-500">
+                                                                    <span id="char-count">0/2000</span>
+                                                                    <span>caracteres</span>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="flex justify-end p-4 border-t border-gray-100">
+                                                        <button type="button" id="btn-interpor-recurso" class="flex items-center gap-2 rounded-md bg-sky-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500">Interpor Recurso</button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </el-dialog-panel>
+                                    </div>
+                                </dialog>
+                            </el-dialog>
+
+                            <!-- DETALHE RECURSO RESPONDIDO -->
+                            <el-dialog>
+                                <dialog id="detalheRespondido" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+                                    <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
+
+                                    <div tabindex="0" class="flex items-end justify-center focus:outline-none p-4 sm:p-0">
+                                        <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 w-full max-w-[800px] max-h-[80vh] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+                                            
+                                            <div class="flex flex-col">
+
+                                                <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
+                                                    <div class="flex flex-col gap-2">
+                                                        <h3 id="dialog-title" class="text-base font-semibold text-gray-900">Detalhe do Recurso</h3>
+                                                        <div class="flex flex-wrap sm:flex-nowrap gap-2 gap-y-1">
+                                                            <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Competência 1</span>
+                                                            <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Resultado da questão discursiva</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center gap-3">
+                                                        <span class="inline-flex items-center rounded-md bg-green-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Deferido</span>
+                                                        <button type="button" command="close" commandfor="detalheRespondido" aria-label="Fechar" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="max-h-[500px] overflow-auto p-4 space-y-4">
+
+                                                    <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
+                                                        <p>Informações do Recurso</p>
+                                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                                            <div class="flex-1">
+                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Protocolo</label>
+                                                                <p class="text-sm">PND-2025-001</p>
+                                                            </div>
+                                                            <div class="flex-1">
+                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">CPF</label>
+                                                                <p class="text-sm">123.456.789-10</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
+                                                        <p>Argumentação Apresentada</p>
+                                                        <div>
+                                                            <label for="" class="block text-sm/6 font-medium text-gray-500">Fundamentação do Recurso</label>
+                                                            <div class="p-4 bg-gray-100 text-sm">
+                                                                Solicito a revisão da pontuação atribuída à Competência 1, referente ao domínio da modalidade escrita formal da língua portuguesa. A resposta apresentada demonstra pleno domínio das regras de ortografia, acentuação, pontuação e concordância verbal e nominal, conforme estabelecido no padrão de resposta. A análise criteriosa do texto evidencia a utilização adequada da norma culta em toda a extensão da resposta, com construções sintáticas corretas e vocabulário técnico apropriado ao contexto solicitado. Os critérios estabelecidos para a pontuação máxima nesta competência foram integralmente atendidos, não havendo desvios gramaticais que justifiquem a pontuação atribuída. A resposta demonstra domínio pleno da língua portuguesa, com emprego adequado de elementos coesivos e estruturação textual apropriada, merecendo, portanto, a pontuação máxima prevista na matriz de correção.
+                                                            </div>
+                                                        </div>
+                                                        <p class="text-xs text-gray-400">Criado em 18/03/2024 às 07:30</p>
+                                                    </div>
+
+                                                    <div class="rounded-md bg-green-50 border border-green-300 p-4">
+                                                        <div class="flex flex-col">
+                                                            <h3 class="font-medium text-green-800">Parecer geral da banca</h3>
+                                                            <div class="mt-2 text-sm text-green-700">
+                                                                <p>Após análise criteriosa da resposta construída e do recurso apresentado, a banca reconhece que a resposta demonstra domínio adequado da norma culta da língua portuguesa. Os critérios de avaliação da Competência 1 foram integralmente atendidos, com uso correto das regras gramaticais e estruturação textual apropriada. O recurso foi deferido, e a pontuação será revista conforme solicitado, passando a refletir adequadamente o desempenho demonstrado pelo candidato nesta competência.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="flex p-4 border-t border-gray-100">
+                                                    <button type="button" command="close" commandfor="detalheRespondido" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:inset-ring-sky-500 hover:bg-sky-600 hover:text-white ml-auto">Fechar</button>
+                                                </div>
+
+                                            </div>
+
+                                        </el-dialog-panel>
+                                    </div>
+                                </dialog>
+                            </el-dialog>
+
+                            <!-- DETALHE RECURSO EM ANÁLISE -->
+                            <el-dialog>
+                                <dialog id="detalheAnalise" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+                                    <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
+
+                                    <div tabindex="0" class="flex items-end justify-center focus:outline-none p-4 sm:p-0">
+                                        <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 w-full max-w-[800px] max-h-[80vh] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+                                            
+                                            <div class="flex flex-col">
+
+                                                <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
+                                                    <div class="flex flex-col gap-2">
+                                                        <h3 id="dialog-title" class="text-base font-semibold text-gray-900">Detalhe do Recurso</h3>
+                                                        <div class="flex flex-wrap sm:flex-nowrap gap-2 gap-y-1">
+                                                            <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Competência 5</span>
+                                                            <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Resultado da questão discursiva</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center gap-3">
+                                                        <span class="inline-flex items-center rounded-md bg-orange-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-orange-500/10">Parcialmente deferido</span>
+                                                        <button type="button" command="close" commandfor="detalheAnalise" aria-label="Fechar" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="max-h-[500px] overflow-auto p-4 space-y-4">
+
+                                                    <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
+                                                        <p>Informações do Recurso</p>
+                                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                                            <div class="flex-1">
+                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Protocolo</label>
+                                                                <p class="text-sm">PND-2025-001</p>
+                                                            </div>
+                                                            <div class="flex-1">
+                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">CPF</label>
+                                                                <p class="text-sm">123.456.789-10</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
+                                                        <p>Argumentação Apresentada</p>
+                                                        <div>
+                                                            <label for="" class="block text-sm/6 font-medium text-gray-500">Fundamentação do Recurso</label>
+                                                            <div class="p-4 bg-gray-100 text-sm">
+                                                                Solicito a revisão da pontuação atribuída à Competência 5, referente à capacidade de elaborar proposta de intervenção ou solução para o problema apresentado. A resposta construída apresenta proposta de solução clara, viável e detalhada, contemplando todos os elementos exigidos no padrão de resposta: identificação do problema, agentes responsáveis, ações concretas e resultados esperados. A proposta demonstra conhecimento técnico adequado e está fundamentada em bases teóricas sólidas, atendendo integralmente aos critérios estabelecidos pela banca. A pontuação atribuída não reflete a qualidade e completude da resposta apresentada, sendo necessária a reavaliação considerando os parâmetros objetivos definidos no edital.
+                                                            </div>
+                                                        </div>
+                                                        <p class="text-xs text-gray-400">Criado em 18/03/2024 às 07:30</p>
+                                                    </div>
+
+                                                    <div class="rounded-md bg-orange-50 border border-orange-300 p-4">
+                                                        <div class="flex flex-col">
+                                                            <h3 class="font-medium text-orange-800">Parecer geral da banca</h3>
+                                                            <div class="mt-2 text-sm text-orange-700">
+                                                                <p>Após análise criteriosa da resposta construída e do recurso apresentado, a banca reconhece que a resposta apresenta alguns elementos adequados, porém não contempla integralmente todos os critérios estabelecidos para a pontuação máxima. O recurso foi parcialmente deferido, com ajuste parcial na pontuação atribuída à Competência 5, refletindo os aspectos corretos identificados na resposta.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="flex p-4 border-t border-gray-100 items-center gap-2">
+                                                    <button command="close" commandfor="detalheAnalise" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:inset-ring-sky-500 hover:bg-sky-600 hover:text-white ml-auto">Fechar</button>
+                                                </div>
+
+                                            </div>
+
+                                        </el-dialog-panel>
+                                    </div>
+                                </dialog>
+                            </el-dialog>
+
+                            <!-- DETALHE RECURSO EXCLUIDO -->
+                            <el-dialog>
+                                <dialog id="detalheExcluido" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+                                    <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
+
+                                    <div tabindex="0" class="flex items-end justify-center focus:outline-none p-4 sm:p-0">
+                                        <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 w-full max-w-[800px] max-h-[80vh] data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+                                            
+                                            <div class="flex flex-col">
+
+                                                <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
+                                                    <div class="flex flex-col gap-2">
+                                                        <h3 id="dialog-title" class="text-base font-semibold text-gray-900">Detalhe do Recurso</h3>
+                                                        <div class="flex flex-wrap sm:flex-nowrap gap-2 gap-y-1">
+                                                            <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Competência 2</span>
+                                                            <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Resultado da questão discursiva</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center gap-3">
+                                                        <span class="inline-flex items-center rounded-md bg-red-600 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-red-500/10">Indeferido</span>
+                                                        <button type="button" command="close" commandfor="detalheExcluido" aria-label="Fechar" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="max-h-[500px] overflow-auto p-4 space-y-4">
+
+                                                    <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
+                                                        <p>Informações do Recurso</p>
+                                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                                            <div class="flex-1">
+                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">Protocolo</label>
+                                                                <p class="text-sm">PND-2025-001</p>
+                                                            </div>
+                                                            <div class="flex-1">
+                                                                <label for="" class="block text-sm/6 font-medium text-gray-500">CPF</label>
+                                                                <p class="text-sm">123.456.789-10</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="border border-gray-200 rounded-lg bg-white p-4 space-y-3">
+                                                        <p>Argumentação Apresentada</p>
+                                                        <div class="p-4 bg-gray-100 text-sm">
+                                                            Solicito a revisão da pontuação atribuída à Competência 2, que avalia a compreensão da proposta e o desenvolvimento do tema. A resposta construída demonstra compreensão integral da proposta apresentada, desenvolvendo todos os aspectos solicitados no comando da questão de forma aprofundada e coerente. Foram apresentados todos os elementos obrigatórios estabelecidos no padrão de resposta, com fundamentação teórica adequada e exemplificações pertinentes ao tema. O critério de completude foi integralmente atendido, não havendo justificativa para a pontuação inferior atribuída quando comparada aos critérios objetivos estabelecidos pela banca examinadora no padrão oficial de correção.
+                                                        </div>
+                                                        <p class="text-xs text-gray-400">Criado em 18/03/2024 às 07:30</p>
+                                                    </div>
+
+                                                    <div class="rounded-md bg-red-50 border border-red-300 p-4">
+                                                        <div class="flex flex-col">
+                                                            <h3 class="font-medium text-red-800">Parecer geral da banca</h3>
+                                                            <div class="mt-2 text-sm text-red-700">
+                                                                <p>Após análise criteriosa da resposta construída e do recurso apresentado, a banca conclui que a resposta não contempla todos os elementos obrigatórios estabelecidos nos critérios de correção. Embora apresente desenvolvimento adequado de alguns aspectos, a ausência de elementos essenciais exigidos no comando da questão justifica a pontuação atribuída. O recurso foi indeferido, mantendo-se a avaliação original.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="flex p-4 border-t border-gray-100 items-center gap-2">
+                                                    <button command="close" commandfor="detalheExcluido" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-600 shadow-xs inset-ring inset-ring-gray-300 hover:inset-ring-sky-500 hover:bg-sky-600 hover:text-white ml-auto">Fechar</button>
+                                                </div>
+
+                                            </div>
+
+                                        </el-dialog-panel>
+                                    </div>
+                                </dialog>
+                            </el-dialog>
+
+                        </div>
+                    </div>
+
+                    <!-- Modal para Questão Anulada -->
+                    <dialog id="dialog-anulada" aria-labelledby="dialog-title-anulada" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+                        <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
+
+                        <div tabindex="0" class="flex items-center justify-center focus:outline-none p-4">
+                            <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in w-full max-w-md">
+                                
+                                <div class="flex flex-col">
+                                    <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
+                                        <h3 id="dialog-title-anulada" class="text-lg font-semibold text-gray-900">Detalhe da Questão</h3>
+                                        <button type="button" command="close" commandfor="dialog-anulada" class="text-gray-400 hover:text-gray-600 focus:outline-none" aria-label="Fechar">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="p-4 space-y-6">
+                                        <!-- Question info -->
+
+                                        <div class="flex justify-between">
+                                            <div class="flex gap-2">
+                                                <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 1</span>
+                                                <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Matemática</span>
+                                            </div>
+                                            <span class="inline-flex items-center rounded-md bg-red-100 px-2 py-1 text-xs font-medium text-red-700 inset-ring inset-ring-red-500/10">Questão Anulada</span>
+                                        </div>
+
+                                        <!-- Answers -->
+                                        <div class="space-y-4">
+                                            <div class="flex items-center gap-3">
+                                                <span class="text-sm text-gray-600">Resposta Preliminar:</span>
+                                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs rounded-md bg-gray-100 font-medium text-gray-900">C</span>
+                                            </div>
+                                            <div class="flex items-center gap-3">
+                                                <span class="text-sm text-gray-600">Resposta Definitiva:</span>
+                                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs rounded-md bg-red-100 font-medium text-red-900">X</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </el-dialog-panel>
+                        </div>
+                    </dialog>
+
+                    <!-- Modal para Gabarito Alterado -->
+                    <dialog id="dialog-alterado" aria-labelledby="dialog-title-alterado" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+                        <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
+
+                        <div tabindex="0" class="flex items-center justify-center focus:outline-none p-4">
+                            <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in w-full max-w-md">
+                                
+                                <div class="flex flex-col">
+                                    <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
+                                        <h3 id="dialog-title-alterado" class="text-lg font-semibold text-gray-900">Detalhe da Questão</h3>
+                                        <button type="button" command="close" commandfor="dialog-alterado" class="text-gray-400 hover:text-gray-600 focus:outline-none" aria-label="Fechar">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="p-4 space-y-6">
+                                        <!-- Question info -->
+
+                                        <div class="flex justify-between">
+                                            <div class="flex gap-2">
+                                                <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 1</span>
+                                                <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Matemática</span>
+                                            </div>
+                                            <span class="inline-flex items-center rounded-md bg-yellow-100 px-2 py-1 text-xs font-medium text-yellow-700 inset-ring inset-ring-yellow-500/10">Gabarito Alterado</span>
+                                        </div>
+
+                                        <!-- Answers -->
+                                        <div class="space-y-4">
+                                            <div class="flex items-center gap-3">
+                                                <span class="text-sm text-gray-600">Resposta Preliminar:</span>
+                                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs rounded-md bg-gray-100 font-medium text-gray-900">A</span>
+                                            </div>
+                                            <div class="flex items-center gap-3">
+                                                <span class="text-sm text-gray-600">Resposta Definitiva:</span>
+                                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs rounded-md bg-gray-100 font-medium text-gray-900">A</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </el-dialog-panel>
+                        </div>
+                    </dialog>
+
+                    <!-- Modal para Gabarito Mantido -->
+                    <dialog id="dialog-mantido" aria-labelledby="dialog-title-mantido" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+                        <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop> 
+
+                        <div tabindex="0" class="flex items-center justify-center focus:outline-none p-4">
+                            <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in w-full max-w-md">
+                                
+                                <div class="flex flex-col">
+                                    <div class="flex justify-between items-baseline p-4 border-b border-gray-100">
+                                        <h3 id="dialog-title-mantido" class="text-lg font-semibold text-gray-900">Detalhe da Questão</h3>
+                                        <button type="button" command="close" commandfor="dialog-mantido" class="text-gray-400 hover:text-gray-600 focus:outline-none" aria-label="Fechar">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="p-4 space-y-6">
+                                        <!-- Question info -->
+
+                                        <div class="flex justify-between">
+                                            <div class="flex gap-2">
+                                                <span class="inline-flex items-center rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white inset-ring inset-ring-gray-500/10">Questão 1</span>
+                                                <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 inset-ring inset-ring-gray-500/10">Matemática</span>
+                                            </div>
+                                            <span class="inline-flex items-center rounded-md bg-green-100 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-500/10">Gabarito Mantido</span>
+                                        </div>
+
+                                        <!-- Answers -->
+                                        <div class="space-y-4">
+                                            <div class="flex items-center gap-3">
+                                                <span class="text-sm text-gray-600">Resposta Preliminar:</span>
+                                                <span class="inline-flex items-center justify-center px-2 py-1 rounded-md bg-gray-100 text-xs font-medium text-gray-900">B</span>
+                                            </div>
+                                            <div class="flex items-center gap-3">
+                                                <span class="text-sm text-gray-600">Resposta Definitiva:</span>
+                                                <span class="inline-flex items-center justify-center px-2 py-1 rounded-md bg-gray-100 text-xs font-medium text-gray-900">B</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </el-dialog-panel>
+                        </div>
+                    </dialog>
+
+
+                </div>
+
+            </div> <!-- Fim do main-content -->
+
+        </main>
+    </div>
+
+    <script>
+        // Tab functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+            const targetId = button.dataset.tabTarget;
+            const targetContent = document.querySelector(targetId);
+
+            // Deactivate ALL active tabs
+            document.querySelectorAll('.tab-button')
+                .forEach(el => {
+                el.classList.remove('active', 'border-sky-500', 'text-sky-600');
+                el.classList.add('border-transparent', 'text-gray-500');
+                });
+
+            // Deactivate ALL contents
+            document.querySelectorAll('.tab-content.active')
+                .forEach(el => el.classList.remove('active'));
+
+            // Activate clicked tab and content
+            button.classList.add('active', 'border-sky-500', 'text-sky-600');
+            button.classList.remove('border-transparent', 'text-gray-500');
+            targetContent.classList.add('active');
+            });
+        });
+
+
+        const div1 = document.getElementById("div1");
+        const div2 = document.getElementById("div2");
+        const btn1 = document.getElementById("btn1");
+        const btn2 = document.getElementById("btn2");
+
+        if (btn1 && btn2) {
+            btn1.addEventListener("click", () => {
+                div1.classList.add("hidden");
+                div2.classList.remove("hidden");
+            });
+
+            btn2.addEventListener("click", () => {
+                div2.classList.add("hidden");
+                div1.classList.remove("hidden");
+            });
+        }
+
+        // Modal control functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🚀 Iniciando controle do modal...');
+            
+            // Elementos do modal
+            const modal = document.getElementById('novoRecurso');
+            const modalDetalhe = document.getElementById('detalheRecurso');
+            const etapa1 = document.getElementById('etapa1-selecionaTipo');
+            const etapa2 = document.getElementById('etapa2-preenchimento');
+            const campoAlternativa = document.getElementById('campo-alternativa');
+            const tituloEtapa2 = document.getElementById('etapa2-titulo');
+            
+            // Botões
+            const btnContinuarEtapa1 = document.getElementById('btn-continuar-etapa1');
+            const btnVoltarEtapa2 = document.getElementById('btn-voltar-etapa2');
+            const btnInterporRecurso = document.getElementById('btn-interpor-recurso');
+            const btnFecharModal = document.getElementById('btn-fechar-modal');
+            const btnFecharDetalhe = document.getElementById('btn-fechar-detalhe');
+            
+            // Radio buttons do tipo de recurso
+            const radioAnulacao = document.querySelector('input[name="tipo-recurso"][value="anulacao"]');
+            const radioAlteracao = document.querySelector('input[name="tipo-recurso"][value="alteracao"]');
+            
+            // Botões de alternativa
+            const botoesAlternativa = document.querySelectorAll('.alternativa-btn');
+            
+            // Estado do modal
+            let tipoRecursoSelecionado = null;
+            let alternativaSelecionada = null;
+            
+            // Função para mostrar etapa
+            function mostrarEtapa(etapa) {
+                console.log('📱 Mostrando etapa:', etapa.id);
+                // Esconder todas as etapas
+                if (etapa1) etapa1.classList.add('hidden');
+                if (etapa2) etapa2.classList.add('hidden');
+                
+                // Mostrar etapa selecionada
+                if (etapa) etapa.classList.remove('hidden');
+                
+                // Se for a etapa 2, inicializar o contador de caracteres
+                if (etapa && etapa.id === 'etapa2-preenchimento') {
+                    console.log('🔄 Inicializando contador na etapa 2...');
+                    setTimeout(() => {
+                        initCharCounter();
+                    }, 100);
+                }
+            }
+            
+            // Função para resetar modal
+            function resetarModal() {
+                console.log('🔄 Resetando modal...');
+                // Resetar seleções
+                if (radioAnulacao) radioAnulacao.checked = false;
+                if (radioAlteracao) radioAlteracao.checked = false;
+                tipoRecursoSelecionado = null;
+                alternativaSelecionada = null;
+                
+                // Resetar botões de alternativa
+                botoesAlternativa.forEach(btn => {
+                    btn.classList.remove('bg-sky-600', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-900');
+                });
+                
+                // Esconder campo de alternativa
+                if (campoAlternativa) campoAlternativa.classList.add('hidden');
+                
+                // Desabilitar botão continuar
+                if (btnContinuarEtapa1) {
+                    btnContinuarEtapa1.disabled = true;
+                    btnContinuarEtapa1.classList.add('disabled:bg-gray-300', 'disabled:cursor-not-allowed');
+                }
+                
+                // Voltar para etapa 1
+                mostrarEtapa(etapa1);
+            }
+            
+            // Função para validar etapa 1
+            function validarEtapa1() {
+                const tipoSelecionado = document.querySelector('input[name="tipo-recurso"]:checked');
+                console.log('✅ Validando etapa 1, tipo selecionado:', tipoSelecionado?.value);
+                if (btnContinuarEtapa1) {
+                    btnContinuarEtapa1.disabled = !tipoSelecionado;
+                    if (tipoSelecionado) {
+                        btnContinuarEtapa1.classList.remove('disabled:bg-gray-300', 'disabled:cursor-not-allowed');
+                    } else {
+                        btnContinuarEtapa1.classList.add('disabled:bg-gray-300', 'disabled:cursor-not-allowed');
+                    }
+                }
+            }
+            
+            // Função para configurar etapa 2 baseada no tipo de recurso
+            function configurarEtapa2(tipo) {
+                console.log('⚙️ Configurando etapa 2 para tipo:', tipo);
+                if (tipo === 'alteracao') {
+                    if (campoAlternativa) campoAlternativa.classList.remove('hidden');
+                    if (tituloEtapa2) tituloEtapa2.textContent = 'Alteração de Gabarito';
+                } else {
+                    if (campoAlternativa) campoAlternativa.classList.add('hidden');
+                    if (tituloEtapa2) tituloEtapa2.textContent = 'Anulação de Questão';
+                }
+                
+                // Inicializar contador após configurar a etapa
+                setTimeout(() => {
+                    initCharCounter();
+                }, 100);
+            }
+            
+            // Função para fechar modal
+            function fecharModal() {
+                console.log('❌ Fechando modal');
+                if (modal) {
+                    modal.close();
+                }
+                resetarModal();
+            }
+            
+            // Função para fechar modal de detalhe
+            function fecharModalDetalhe() {
+                console.log('❌ Fechando modal de detalhe');
+                if (modalDetalhe) {
+                    modalDetalhe.close();
+                }
+            }
+            
+            // Event listeners para radio buttons
+            if (radioAnulacao) {
+                radioAnulacao.addEventListener('change', () => {
+                    console.log('📻 Radio anulação clicado');
+                    if (radioAnulacao.checked) {
+                        tipoRecursoSelecionado = 'anulacao';
+                        validarEtapa1();
+                    }
+                });
+            }
+            
+            if (radioAlteracao) {
+                radioAlteracao.addEventListener('change', () => {
+                    console.log('📻 Radio alteração clicado');
+                    if (radioAlteracao.checked) {
+                        tipoRecursoSelecionado = 'alteracao';
+                        validarEtapa1();
+                    }
+                });
+            }
+            
+            // Event listener para botão continuar
+            if (btnContinuarEtapa1) {
+                btnContinuarEtapa1.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('▶️ Botão continuar clicado, tipo selecionado:', tipoRecursoSelecionado);
+                    if (tipoRecursoSelecionado) {
+                        configurarEtapa2(tipoRecursoSelecionado);
+                        mostrarEtapa(etapa2);
+                        console.log('✅ Navegando para etapa 2');
+                    } else {
+                        console.log('❌ Nenhum tipo selecionado');
+                    }
+                });
+            }
+            
+            // Event listener para botão voltar
+            if (btnVoltarEtapa2) {
+                btnVoltarEtapa2.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('⬅️ Voltando para etapa 1');
+                    mostrarEtapa(etapa1);
+                });
+            }
+            
+            // Event listeners para botões de alternativa
+            botoesAlternativa.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    console.log('🔘 Alternativa clicada:', btn.dataset.alternativa);
+                    
+                    // Remover seleção anterior
+                    botoesAlternativa.forEach(b => {
+                        b.classList.remove('bg-sky-600', 'text-white');
+                        b.classList.add('bg-white', 'text-gray-900');
+                    });
+                    
+                    // Selecionar nova alternativa
+                    btn.classList.remove('bg-white', 'text-gray-900');
+                    btn.classList.add('bg-sky-600', 'text-white');
+                    
+                    alternativaSelecionada = btn.dataset.alternativa;
+                });
+            });
+            
+            // Event listener para botão interpor recurso
+            if (btnInterporRecurso) {
+                btnInterporRecurso.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    console.log('💾 Interpondo recurso...');
+                    
+                    // Validar se todos os campos obrigatórios estão preenchidos
+                    const questaoSelecionada = document.querySelector('el-select[name="selected"]');
+                    const argumentacao = document.getElementById('comment');
+                    
+                    let valido = true;
+                    let mensagem = '';
+                    
+                    if (!questaoSelecionada || !questaoSelecionada.value || questaoSelecionada.value === '') {
+                        valido = false;
+                        mensagem = 'Por favor, selecione uma questão.';
+                    } else if (!argumentacao || !argumentacao.value.trim()) {
+                        valido = false;
+                        mensagem = 'Por favor, preencha a argumentação.';
+                    } else if (tipoRecursoSelecionado === 'alteracao' && !alternativaSelecionada) {
+                        valido = false;
+                        mensagem = 'Por favor, selecione uma alternativa correta proposta.';
+                    }
+                    
+                    if (!valido) {
+                        showToast(mensagem, 'error');
+                        return;
+                    }
+                    
+                    // Aqui você pode adicionar a lógica para enviar o recurso
+                    console.log('✅ Recurso a ser interposto:', {
+                        tipo: tipoRecursoSelecionado,
+                        questao: questaoSelecionada ? questaoSelecionada.value : '',
+                        alternativa: alternativaSelecionada,
+                        argumentacao: argumentacao ? argumentacao.value : ''
+                    });
+                    
+                    // Fechar modal
+                    fecharModal();
+                    
+                    // Mostrar mensagem de sucesso
+                    showToast('Recurso interposto com sucesso!', 'success');
+                });
+            }
+            
+            // Event listeners para botões de fechar (removido - agora gerenciado pelo sistema unificado)
+            
+            // Observar quando o modal é aberto para resetar
+            if (modal) {
+                const observer = new MutationObserver((mutations) => {
+                    mutations.forEach((mutation) => {
+                        if (mutation.type === 'attributes' && mutation.attributeName === 'open') {
+                            if (modal.hasAttribute('open')) {
+                                console.log('🔓 Modal aberto, resetando...');
+                                setTimeout(() => {
+                                    resetarModal();
+                                }, 100);
+                            }
+                        }
+                    });
+                });
+                
+                observer.observe(modal, { attributes: true, attributeFilter: ['open'] });
+            }
+            
+            console.log('✅ Modal inicializado com sucesso');
+        });
+
+        // Contador de caracteres - Versão ultra simplificada
+        function initCharCounter() {
+            const textarea = document.getElementById('comment');
+            const charCount = document.getElementById('char-count');
+            
+            if (textarea && charCount) {
+                console.log('✅ Configurando contador de caracteres...');
+                
+                function updateCounter() {
+                    const count = textarea.value.length;
+                    charCount.textContent = `${count}/2000`;
+                    
+                    // Cores baseadas no limite
+                    if (count > 2000) {
+                        charCount.className = 'text-red-500';
+                    } else if (count > 1600) {
+                        charCount.className = 'text-yellow-500';
+                    } else {
+                        charCount.className = 'text-gray-500';
+                    }
+                }
+                
+                // Event listeners
+                textarea.addEventListener('input', updateCounter);
+                textarea.addEventListener('paste', () => setTimeout(updateCounter, 10));
+                
+                // Atualizar inicial
+                updateCounter();
+            }
+        }
+
+        // Inicializar contador
+        document.addEventListener('DOMContentLoaded', initCharCounter);
+        
+        // Tentar inicializar periodicamente
+        setInterval(initCharCounter, 2000);
+
+        // Funcionalidade unificada para todos os modais
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lista de todos os modais do sistema
+            const todosOsModais = [
+                'novoRecurso',
+                'detalheRecurso', 
+                'dialog-anulada',
+                'dialog-alterado',
+                'dialog-mantido'
+            ];
+
+            // Função para configurar comportamento padrão de um modal
+            function configurarModal(modalId) {
+                const modal = document.getElementById(modalId);
+                if (!modal) return;
+
+                // Encontrar o backdrop do modal
+                const backdrop = modal.querySelector('.el-dialog-backdrop');
+                
+                // Encontrar botão de fechar (pode ter IDs diferentes)
+                let btnFechar = null;
+                
+                // Tentar diferentes seletores para o botão de fechar
+                if (modalId === 'novoRecurso') {
+                    btnFechar = document.getElementById('btn-fechar-modal');
+                } else if (modalId === 'detalheRecurso') {
+                    btnFechar = document.getElementById('btn-fechar-detalhe');
+                } else {
+                    // Para os modais de detalhe das questões
+                    btnFechar = modal.querySelector(`button[commandfor="${modalId}"]`);
+                }
+
+                // Função para fechar o modal
+                function fecharModal() {
+                    modal.close();
+                }
+
+                // Fechar ao clicar no botão X
+                if (btnFechar) {
+                    btnFechar.addEventListener('click', fecharModal);
+                }
+
+                // Fechar ao clicar no backdrop (fora do modal)
+                if (backdrop) {
+                    backdrop.addEventListener('click', (e) => {
+                        // Verificar se o clique foi diretamente no backdrop, não em um filho
+                        if (e.target === backdrop) {
+                            fecharModal();
+                        }
+                    });
+                }
+
+                // Para modais que são dialog direto (questões do gabarito), também adicionar listener no próprio dialog
+                if (modalId.startsWith('dialog-')) {
+                    modal.addEventListener('click', (e) => {
+                        // Se o clique foi diretamente no dialog (não em elementos filhos), fechar
+                        if (e.target === modal) {
+                            fecharModal();
+                        }
+                    });
+                }
+
+                // Fechar ao pressionar ESC
+                modal.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        fecharModal();
+                    }
+                });
+            }
+
+            // Configurar todos os modais
+            todosOsModais.forEach(configurarModal);
+        });
+    </script>
+
+    <!-- Toast container -->
+    <div id="toast-root" class="fixed inset-0 pointer-events-none z-[1000]">
+      <div class="absolute top-4 right-4 flex flex-col gap-2"></div>
+    </div>
+
+    <script>
+    function showToast(message, type = 'success', timeoutMs = 4000) {
+        const root = document.querySelector('#toast-root > div');
+        if (!root) return;
+
+        const base =
+            'pointer-events-auto w-[min(92vw,380px)] rounded-lg border px-4 py-3 shadow-lg text-sm ' +
+            'transition-all duration-200 bg-white border-gray-200 text-gray-900 ' +
+            'dark:bg-gray-900 dark:border-gray-800 dark:text-gray-100';
+
+        const variants = {
+            success: 'border-emerald-200/60 bg-emerald-50 text-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-100',
+            error: 'border-red-200/60 bg-red-50 text-red-900 dark:bg-red-950/40 dark:text-red-100',
+            warning: 'border-amber-200/60 bg-amber-50 text-amber-900 dark:bg-amber-950/40 dark:text-amber-100',
+            info: 'border-sky-200/60 bg-sky-50 text-sky-900 dark:bg-sky-950/40 dark:text-sky-100',
+        };
+
+        const el = document.createElement('div');
+        el.className = `${base} ${variants[type] ?? ''} translate-y-[-6px] opacity-0`;
+        el.innerHTML = `<div class="flex items-start gap-3">
+<div class="mt-0.5">${type === 'success' ? '✅' : type === 'error' ? '⛔' : type === 'warning' ? '⚠️' : 'ℹ️'}</div>
+<div class="flex-1">${message}</div>
+<button class="ml-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">✕</button>
+</div>`;
+
+        const closeBtn = el.querySelector('button');
+        const remove = () => {
+            el.classList.add('opacity-0', 'translate-y-[-6px]');
+            setTimeout(() => el.remove(), 180);
+        };
+        closeBtn.addEventListener('click', remove);
+
+        root.appendChild(el);
+        requestAnimationFrame(() => {
+            el.classList.remove('translate-y-[-6px]', 'opacity-0');
+            el.classList.add('translate-y-0', 'opacity-100');
+        });
+
+        if (timeoutMs > 0) setTimeout(remove, timeoutMs);
+    }
+    </script>
+
+</body>
+</html>
